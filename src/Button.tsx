@@ -3,7 +3,7 @@ import { ButtonProps } from './types/buttons';
 
 const Button: FC<ButtonProps> = ({
   tailwindUtilities = [
-    'bg-gray-500',
+    'bg-test',
     'hover:bg-gray-700',
     'text-white',
     'font-bold',
@@ -12,11 +12,12 @@ const Button: FC<ButtonProps> = ({
     'rounded',
   ],
   children,
+  classNames,
   ...props
 }) => {
   return (
     <button
-      className={`${tailwindUtilities?.join(' ')} ${props.className}`}
+      className={`${tailwindUtilities?.join(' ')} ${classNames}`}
       {...props}
     >
       {children}

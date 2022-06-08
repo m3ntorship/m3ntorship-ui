@@ -1,5 +1,8 @@
 import { HTMLAttributes } from 'react';
 
+export interface ClassNames {
+  classNames: string
+}
 export interface ButtonVarient {
   varient:
     | 'primary' // for example varient: '100'
@@ -24,6 +27,7 @@ export interface ButtonTailwindUtility {
 export interface ButtonProps
   extends ButtonVarient,
     ButtonSize,
+    ClassNames,
     ButtonTailwindUtility,
     HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
