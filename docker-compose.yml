@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  m3ntorship_ui_storybook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: m3ntorship_ui_storybook_container
+    ports:
+      - 6006:6006
+    volumes:
+      - .:/app
+      - ./app/node_modules
