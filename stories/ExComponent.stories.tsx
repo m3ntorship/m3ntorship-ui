@@ -9,4 +9,4 @@ export default {
 } as Meta<typeof ExComponent>
 
 
-export const Primary: Story<typeof ExComponent> = () => <ExComponent type="primary" styles="bg-test p-4 text-white" content='Here is the content' />
+export const Primary: Story<typeof ExComponent> = () => <ExComponent type="primary" styles="bg-test p-4" content='Here is the content' />
