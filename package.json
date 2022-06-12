@@ -15,41 +15,22 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "peerDependencies": {
     "react": ">=16"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
   "name": "m3ntorship-ui",
   "author": "atwfk",
   "module": "dist/m3ntorship-ui.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/m3ntorship-ui.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/m3ntorship-ui.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
     "@babel/core": "^7.18.2",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@storybook/addon-essentials": "^6.5.6",
     "@storybook/addon-info": "^5.3.21",
@@ -62,7 +43,8 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-tsc": "^2.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-is": "^18.1.0",
@@ -70,5 +52,14 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "tsdx lint --max-warnings=0",
+      "prettier -w"
+    ],
+    "src/**/*.{json,css,scss,md}": [
+      "prettier -w"
+    ]
   }
 }
