@@ -2,21 +2,16 @@ import React, { FC } from 'react';
 import { ButtonProps } from './types/buttons';
 
 const Button: FC<ButtonProps> = ({
-  tailwindUtilities = [
-    'bg-gray-500',
-    'hover:bg-gray-700',
-    'text-white',
-    'font-bold',
-    'py-2',
-    'px-4',
-    'rounded',
-  ],
+  tailwindUtilities,
   children,
+  size,
   ...props
 }) => {
   return (
     <button
-      className={`${tailwindUtilities?.join(' ')} ${props.className}`}
+      className={`${props.className}
+      ${tailwindUtilities?.join(' ')} 
+      `}
       {...props}
     >
       {children}

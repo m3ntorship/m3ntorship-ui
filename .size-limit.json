@@ -1,0 +1,10 @@
+[
+  {
+    "path": "dist/m3ntorship-ui.cjs.production.min.js",
+    "limit": "10 KB"
+  },
+  {
+    "path": "dist/m3ntorship-ui.esm.js",
+    "limit": "10 KB"
+  }
+]
