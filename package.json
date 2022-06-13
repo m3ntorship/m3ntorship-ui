@@ -15,12 +15,12 @@
     "build": "tsdx build && yarn build-tailwind",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "build-tailwind": "npx tailwindcss -o ./dist/tailwind.css --minify",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build-tailwind": "npx tailwindcss -o ./dist/tailwind.css --minify"
   },
   "peerDependencies": {
     "react": ">=16"
