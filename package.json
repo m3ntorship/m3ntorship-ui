@@ -25,31 +25,9 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
   "name": "m3ntorship-ui",
   "author": "atwfk",
   "module": "dist/m3ntorship-ui.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/m3ntorship-ui-library.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/m3ntorship-ui-library.esm.js",
-      "limit": "10 KB"
-    }
-  ],
-
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@commitlint/cli": "^17.0.2",
