@@ -1,13 +1,6 @@
-FROM node:16-alpine3.15
-
+FROM node:14-alpine3.15
 WORKDIR /app
-
-COPY package.json .
-
-RUN yarn 
-
-COPY . .
-
-EXPOSE 6006
-
-CMD ["yarn", "storybook"]
+COPY storybook-static .
+RUN yarn global add serve
+EXPOSE 3000
+CMD ["serve", "."]
