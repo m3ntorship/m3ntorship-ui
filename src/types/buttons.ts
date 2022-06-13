@@ -18,7 +18,7 @@ export interface ButtonSize {
 }
 
 export interface ButtonTailwindUtility {
-  tailwindUtilities: Array<String> | null;
+  tailwindUtilities: Array<string> | null;
 }
 
 export interface ButtonProps

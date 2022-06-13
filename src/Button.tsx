@@ -1,12 +1,8 @@
 import React, { FC } from 'react';
+
 import { ButtonProps } from './types/buttons';
 
-const Button: FC<ButtonProps> = ({
-  tailwindUtilities,
-  children,
-  size,
-  ...props
-}) => {
+const Button: FC<ButtonProps> = ({ tailwindUtilities, children, ...props }) => {
   return (
     <button
       className={`${props.className}
