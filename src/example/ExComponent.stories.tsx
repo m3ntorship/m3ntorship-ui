@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { ExComponent } from '../src/example/ExComponent';
+import { ExComponent } from './ExComponent';
 
 export default {
   title: 'example component',
