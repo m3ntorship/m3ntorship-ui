@@ -1,5 +1,6 @@
 import React, { FC, HTMLAttributes, ReactChild } from 'react';
 import Button from './Button';
+import { ExComponent } from './example/ExComponent';
 export interface Props extends HTMLAttributes<HTMLDivElement> {
   /** custom content, defaults to 'the snozzberries taste like snozzberries' */
   children?: ReactChild;
@@ -18,4 +19,4 @@ export const Thing: FC<Props> = ({ children }) => {
   );
 };
 
-export {Button}
+export {Button, ExComponent}
