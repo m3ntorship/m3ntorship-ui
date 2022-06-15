@@ -25,6 +25,9 @@ jobs:
       - name: Lint
         run: yarn lint
 
+      - name: check typecript errors
+        run: yarn typecheck
+
       - name: Test
         run: yarn test --ci --coverage --maxWorkers=2
 
