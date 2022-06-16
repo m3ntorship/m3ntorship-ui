@@ -1,50 +1,11 @@
-const tailwindThemeTokens = require('./figmaTokens.json');
-
-const themeColors = () => {
-  const colors = tailwindThemeTokens['inventory'];
-  Object.keys(colors).map(function(property) {
-    Object.keys(colors[property]).map(item => {
-      colors[property][item.split('-')[1]] = colors[property][item]['value'];
-      delete colors[property][item];
-    });
-  });
-  return colors;
-};
-const oneLayerWithPixelAdding = itemName => {
-  const fontSizes = tailwindThemeTokens[itemName];
-  Object.keys(fontSizes).map(property => {
-    fontSizes[property] = `${fontSizes[property].value}px`;
-  });
-  return fontSizes;
-};
-const themeFontFamily = () => {
-  const fontFamily = tailwindThemeTokens['fontFamily'];
-  Object.keys(fontFamily).map(property => {
-    fontFamily[property] = [fontFamily[property]['value']];
-  });
-  return fontFamily;
-};
-const oneLayerWithNoPixel = itemName => {
-  const fontWeight = tailwindThemeTokens[itemName];
-  Object.keys(fontWeight).map(property => {
-    fontWeight[property] = fontWeight[property].value;
-  });
-  return fontWeight;
-};
-const themeShadowBox = () => {
-  const boxShadow = tailwindThemeTokens['boxShadow'];
-  Object.keys(boxShadow).map(property => {
-    boxShadow[property] = Object.keys(boxShadow[property]['value'])
-      .map(item => {
-        if (item !== 'type' && item !== 'color')
-          return `${boxShadow[property]['value'][item]}px`;
-        if (item === 'color') return boxShadow[property]['value'][item];
-        return;
-      })
-      .join(' ');
-  });
-  return boxShadow;
-};
+const {
+  themeColors,
+  oneLayerWithPixelAdding,
+  themeFontFamily,
+  oneLayerWithNoPixel,
+  themeShadowBox,
+  themeLetterSpacing,
+} = require('./utils/tailwind/tailwindHelpers.js');
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './stories/*'],
   theme: {
@@ -118,6 +79,9 @@ module.exports = {
       'misc-standard-border': 'rgba(var(--color-misc), 0.3)',
       'misc-divider': 'rgba(var(--color-misc), 0.1)',
       'misc-rating': 'rgba(var(--color-misc-rating), <alpha-value>)',
+      white: 'rgb(255, 255, 255)',
+      black: 'rgb(0, 0, 0)',
+      transparent: 'transparent',
     },
     fontSize: oneLayerWithPixelAdding('fontSize'),
     lineHeight: oneLayerWithPixelAdding('lineHeight'),
@@ -128,6 +92,7 @@ module.exports = {
     opacity: oneLayerWithNoPixel('opacity'),
     borderWidth: oneLayerWithPixelAdding('brd-width'),
     boxShadow: themeShadowBox(),
+    letterSpacing: themeLetterSpacing(),
     screens: {
       small: '0',
       medium: '600px',
