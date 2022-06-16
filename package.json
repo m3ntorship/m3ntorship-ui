@@ -20,6 +20,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepare": "husky install",
+    "typecheck": "tsc --noEmit --incremental false",
     "build-tailwind": "npx tailwindcss -o ./dist/tailwind.css --minify"
   },
   "peerDependencies": {
@@ -43,12 +44,11 @@
     "@types/react-dom": "^18.0.5",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
-    "postcss": "^8.4.14",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-tsc": "^2.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.0",
+    "postcss": "^8.4.14",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-is": "^18.1.0",

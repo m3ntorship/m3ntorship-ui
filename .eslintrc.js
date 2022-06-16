@@ -4,7 +4,6 @@ module.exports = {
     'simple-import-sort',
     'unused-imports',
     'import',
-    'tsc',
   ],
   extends: [
     'eslint:recommended',
@@ -12,6 +11,7 @@ module.exports = {
     'prettier',
     'plugin:import/recommended',
     'plugin:import/typescript',
+    'plugin:react/recommended',
   ],
   rules: {
     'no-console': 'warn',
@@ -82,16 +82,14 @@ module.exports = {
       },
     ],
     //#endregion  //*======== Import Sort ===========
-
-    'tsc/config': [
-      1,
-      {
-        configFile: 'tsconfig.eslint.json',
-      },
-    ],
   },
   globals: {
     React: true,
     JSX: true,
+  },
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
   },
 };
