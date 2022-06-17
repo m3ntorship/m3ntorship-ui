@@ -66,5 +66,8 @@
     "src/**/*.{json,css,scss,md}": [
       "prettier -w"
     ]
+  },
+  "dependencies": {
+    "classnames": "^2.3.1"
   }
 }
