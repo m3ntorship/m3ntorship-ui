@@ -8,7 +8,9 @@ export default {
   component: ExComponent,
 } as Meta<typeof ExComponent>;
 
-const Template: Story<typeof ExComponent> = (args) => <ExComponent {...args} />;
+const Template: Story<typeof ExComponent> = function (args) {
+  return <ExComponent {...args} />;
+};
 
 export const Default = Template.bind({});
 Default.args = { styles: '', content: 'Defalt' };
