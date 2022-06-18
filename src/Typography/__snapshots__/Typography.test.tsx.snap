@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography Should render body1 1`] = `
+<p
+  className="font-inter text-dgrey-800 font-regular leading-24 text-base tracking-semi-wide"
+  variant="body1"
+>
+  Lorem ipsum dolor sit amet.
+</p>
+`;
+
+exports[`Typography Should render body2 1`] = `
+<p
+  className="font-inter text-dgrey-800 font-regular leading-20 text-14 tracking-semi-wide"
+  variant="body2"
+>
+  Lorem ipsum dolor sit amet.
+</p>
+`;
+
+exports[`Typography Should render caption 1`] = `
+<p
+  className="font-inter text-dgrey-800 font-regular leading-16 text-12 tracking-wide"
+  variant="caption"
+>
+  Lorem ipsum dolor sit amet.
+</p>
+`;
+
+exports[`Typography Should render disclaimer 1`] = `
+<p
+  className="font-inter text-dgrey-800 font-regular leading-14 text-10 tracking-very-wide"
+  variant="disclaimer"
+>
+  Lorem ipsum dolor sit amet.
+</p>
+`;
+
+exports[`Typography Should render h1 1`] = `
+<h1
+  className="font-inter text-dgrey-800 font-bold leading-72 text-64 tracking-tight"
+  variant="h1"
+>
+  Lorem ipsum dolor sit amet.
+</h1>
+`;
+
+exports[`Typography Should render h2 1`] = `
+<h2
+  className="font-inter text-dgrey-800 font-bold leading-64 text-56 tracking-semi-tight3"
+  variant="h2"
+>
+  Lorem ipsum dolor sit amet.
+</h2>
+`;
+
+exports[`Typography Should render h3 1`] = `
+<h3
+  className="font-inter text-dgrey-800 font-bold leading-56 text-48 tracking-semi-tight3"
+  variant="h3"
+>
+  Lorem ipsum dolor sit amet.
+</h3>
+`;
+
+exports[`Typography Should render h4 1`] = `
+<h4
+  className="font-inter text-dgrey-800 font-bold leading-48 text-40 tracking-semi-tight2"
+  variant="h4"
+>
+  Lorem ipsum dolor sit amet.
+</h4>
+`;
+
+exports[`Typography Should render h5 1`] = `
+<h5
+  className="font-inter text-dgrey-800 font-bold leading-40 text-32 tracking-semi-tight1"
+  variant="h5"
+>
+  Lorem ipsum dolor sit amet.
+</h5>
+`;
+
+exports[`Typography Should render h6 1`] = `
+<h6
+  className="font-inter text-dgrey-800 font-semibold leading-36 text-28 tracking-normal"
+  variant="h6"
+>
+  Lorem ipsum dolor sit amet.
+</h6>
+`;
+
+exports[`Typography Should render hero 1`] = `
+<h1
+  className="font-inter text-dgrey-800 font-bold leading-80 text-72 tracking-very-tight"
+  variant="hero"
+>
+  Lorem ipsum dolor sit amet.
+</h1>
+`;
+
+exports[`Typography Should render subtitle 1`] = `
+<h6
+  className="font-inter text-dgrey-800 font-regular leading-32 text-20 tracking-semi-wide"
+  variant="subtitle"
+>
+  Lorem ipsum dolor sit amet.
+</h6>
+`;
