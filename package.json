@@ -61,7 +61,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "tsdx lint --max-warnings=0 autoFix=true",
+      "tsdx lint --max-warnings=0 ",
       "prettier -w"
     ],
     "src/**/*.{json,css,scss,md}": [
