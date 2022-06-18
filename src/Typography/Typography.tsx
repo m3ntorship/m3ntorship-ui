@@ -1,11 +1,12 @@
+import className from 'classnames';
 import React, { ElementType, FC } from 'react';
+
 import {
-  TypographyProps,
-  TYPOGRAPHY_VARIANTS,
   BaseTypographyProps,
   SHARED_CLASSNAMES,
+  TYPOGRAPHY_VARIANTS,
+  TypographyProps,
 } from './Typography.types';
-import className from 'classnames';
 
 const BaseTypography: FC<BaseTypographyProps> = ({
   as: Tag,
