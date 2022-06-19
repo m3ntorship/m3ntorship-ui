@@ -9,7 +9,7 @@ export default {
   component: Typography,
 } as Meta<typeof Typography>;
 
-const Template: Story<TypographyProps> = (args) => <Typography {...args} />;
+const Template: Story<TypographyProps> = args => <Typography {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
