@@ -22,25 +22,20 @@ const Typography: FC<TypographyProps> = ({
   children,
   ...props
 }) => {
-  return variant && TYPOGRAPHY_VARIANTS[variant] ? (
+  const isValidVariant = variant && TYPOGRAPHY_VARIANTS[variant];
+
+  return (
     <BaseTypography
-      as={TYPOGRAPHY_VARIANTS[variant].variantName as ElementType}
+      as={
+        isValidVariant
+          ? (TYPOGRAPHY_VARIANTS[variant].variantName as ElementType)
+          : 'p'
+      }
       className={classNames(
         SHARED_CLASSNAMES,
-        TYPOGRAPHY_VARIANTS[variant].variantClassName,
-        className
-      )}
-      style={{ textAlign: align, ...style }}
-      {...props}
-    >
-      {children}
-    </BaseTypography>
-  ) : (
-    <BaseTypography
-      as="p"
-      className={classNames(
-        SHARED_CLASSNAMES,
-        TYPOGRAPHY_VARIANTS.body1.variantClassName,
+        isValidVariant
+          ? TYPOGRAPHY_VARIANTS[variant].variantClassName
+          : TYPOGRAPHY_VARIANTS.body1.variantClassName,
         className
       )}
       style={{ textAlign: align, ...style }}
