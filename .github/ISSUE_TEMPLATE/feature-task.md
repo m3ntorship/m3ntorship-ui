@@ -4,7 +4,6 @@ about: Add a new task report
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 **Story**
