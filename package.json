@@ -21,6 +21,7 @@
     "build-storybook": "build-storybook",
     "prepare": "husky install",
     "typecheck": "tsc --noEmit --incremental false",
+    "format": "prettier -w .",
     "build-tailwind": "npx tailwindcss -o ./dist/tailwind.css --minify"
   },
   "peerDependencies": {

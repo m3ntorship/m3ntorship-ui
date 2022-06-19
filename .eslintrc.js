@@ -1,17 +1,27 @@
 module.exports = {
+  globals: {
+    React: true,
+    JSX: true,
+  },
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+  },
   plugins: [
     '@typescript-eslint',
     'simple-import-sort',
     'unused-imports',
     'import',
+    'prettier',
   ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:react/recommended',
+    'plugin:prettier/recommended',
   ],
   rules: {
     'no-console': 'warn',
@@ -82,14 +92,5 @@ module.exports = {
       },
     ],
     //#endregion  //*======== Import Sort ===========
-  },
-  globals: {
-    React: true,
-    JSX: true,
-  },
-  env: {
-    browser: true,
-    node: true,
-    jest: true,
   },
 };
