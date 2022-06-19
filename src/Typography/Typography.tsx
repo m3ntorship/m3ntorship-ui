@@ -1,4 +1,4 @@
-import className from 'classnames';
+import classNames from 'classnames';
 import React, { ElementType, FC } from 'react';
 
 import {
@@ -14,28 +14,39 @@ const BaseTypography: FC<BaseTypographyProps> = ({
   ...props
 }) => <Tag {...props}>{children}</Tag>;
 
-const Typography: FC<TypographyProps> = (props) => {
-  return props.variant && TYPOGRAPHY_VARIANTS[props.variant] ? (
+const Typography: FC<TypographyProps> = ({
+  className,
+  variant,
+  style,
+  align,
+  children,
+  ...props
+}) => {
+  return variant && TYPOGRAPHY_VARIANTS[variant] ? (
     <BaseTypography
-      as={TYPOGRAPHY_VARIANTS[props.variant].variantName as ElementType}
-      className={className(
+      as={TYPOGRAPHY_VARIANTS[variant].variantName as ElementType}
+      className={classNames(
         SHARED_CLASSNAMES,
-        TYPOGRAPHY_VARIANTS[props.variant].variantClassName
+        TYPOGRAPHY_VARIANTS[variant].variantClassName,
+        className
       )}
+      style={{ textAlign: align, ...style }}
       {...props}
     >
-      {props.children}
+      {children}
     </BaseTypography>
   ) : (
     <BaseTypography
       as="p"
-      className={className(
+      className={classNames(
         SHARED_CLASSNAMES,
-        TYPOGRAPHY_VARIANTS.body1.variantClassName
+        TYPOGRAPHY_VARIANTS.body1.variantClassName,
+        className
       )}
+      style={{ textAlign: align, ...style }}
       {...props}
     >
-      {props.children}
+      {children}
     </BaseTypography>
   );
 };

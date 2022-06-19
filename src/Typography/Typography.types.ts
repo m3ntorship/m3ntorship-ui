@@ -57,6 +57,7 @@ export interface TypographyProps
     HTMLAttributes<HTMLParagraphElement> {
   variant?: keyof typeof TYPOGRAPHY_VARIANTS;
   children?: ReactNode;
+  align?: 'center' | 'inherit' | 'justify' | 'left' | 'right' | 'start' | 'end';
 }
 
 export interface BaseTypographyProps

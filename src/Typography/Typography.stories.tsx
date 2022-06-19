@@ -15,4 +15,5 @@ export const Default = Template.bind({});
 Default.args = {
   variant: 'h1',
   children: 'Lorem ipsum dolor sit amet.',
+  className: 'bg-red-200',
 };
