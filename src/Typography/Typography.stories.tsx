@@ -16,4 +16,5 @@ Default.args = {
   variant: 'h1',
   children: 'Lorem ipsum dolor sit amet.',
   className: 'bg-red-200',
+  align: 'left',
 };
