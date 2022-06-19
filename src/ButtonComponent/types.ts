@@ -1,5 +1,6 @@
 export interface ButtonProps {
   content?: string;
-  type?: string;
-  // type: 'primary' | 'secondary' | 'natural';
+  variant?: 'filled' | 'ghost';
+  color?: 'primary' | 'secondary' | 'neutral';
+  size?: 'large' | 'medium' | 'small';
 }

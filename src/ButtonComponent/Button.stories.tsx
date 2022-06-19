@@ -10,8 +10,10 @@ export default {
 
 const Template: Story<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = { content: 'Primary One', type: 'primary' };
-
-export const Secondary = Template.bind({});
-Secondary.args = { content: 'Secondary One', type: 'secondary' };
+export const Filled = Template.bind({});
+Filled.args = {
+  content: 'Filled Type',
+  color: 'primary',
+  variant: 'filled',
+  size: 'large',
+};
