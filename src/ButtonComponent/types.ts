@@ -4,4 +4,5 @@ export interface ButtonProps {
   color?: 'primary' | 'secondary' | 'neutral';
   size?: 'large' | 'medium' | 'small';
   spicialClasses?: string;
+  disabled?: true | false;
 }

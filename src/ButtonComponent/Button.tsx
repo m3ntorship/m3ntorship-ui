@@ -10,20 +10,26 @@ const Button = ({
   variant,
   color,
   size,
+  disabled,
 }: ButtonProps): JSX.Element => {
   if (variant === 'filled') {
     return (
       <BasedButton
         content={content}
         size={size}
-        spicialClasses={classnames('rounded-med', {
-          // handle the color
-          'bg-primary hover:bg-primary-hover active:bg-primary text-white ':
-            color === 'primary',
-          'bg-secondary hover:bg-secondary-hover text-white ':
-            color === 'secondary',
-          'bg-neutral hover:bg-neutral-hover text-white ': color === 'neutral',
-        })}
+        disabled={disabled}
+        spicialClasses={classnames(
+          'disabled:text-disabled-text disabled:bg-action-background-disabled',
+          {
+            // handle the color
+            'bg-primary hover:bg-primary-hover active:bg-ba-900 text-white ':
+              color === 'primary',
+            'bg-secondary hover:bg-secondary-hover active:bg-bb-900 text-white ':
+              color === 'secondary',
+            'bg-neutral hover:bg-dgrey-700 active:bg-dgrey-900 text-white ':
+              color === 'neutral',
+          }
+        )}
       />
     );
   } else {
@@ -37,10 +43,12 @@ const BasedButton = ({
   content,
   spicialClasses,
   size,
+  disabled,
 }: ButtonProps): JSX.Element => {
   return (
     <button
-      className={classnames('rounded-med', spicialClasses, {
+      disabled={disabled}
+      className={classnames('rounded-med ', spicialClasses, {
         // handle the sizes
         ' py-med px-lrg text-20 ': size === 'large',
         ' py-xs px-med text-base': size === 'medium',
