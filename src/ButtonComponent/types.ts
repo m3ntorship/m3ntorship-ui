@@ -3,4 +3,5 @@ export interface ButtonProps {
   variant?: 'filled' | 'ghost';
   color?: 'primary' | 'secondary' | 'neutral';
   size?: 'large' | 'medium' | 'small';
+  spicialClasses?: string;
 }
