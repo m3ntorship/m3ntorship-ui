@@ -2,10 +2,10 @@
 
 exports[`Typography Should render body1 1`] = `
 <p
-  className="font-inter text-dgrey-800 font-regular leading-24 text-base tracking-semi-wide"
+  className="font-inter text-dgrey-800 body1"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >
@@ -15,10 +15,10 @@ exports[`Typography Should render body1 1`] = `
 
 exports[`Typography Should render body2 1`] = `
 <p
-  className="font-inter text-dgrey-800 font-regular leading-20 text-14 tracking-semi-wide"
+  className="font-inter text-dgrey-800 body2"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >
@@ -28,10 +28,10 @@ exports[`Typography Should render body2 1`] = `
 
 exports[`Typography Should render caption 1`] = `
 <p
-  className="font-inter text-dgrey-800 font-regular leading-16 text-12 tracking-wide"
+  className="font-inter text-dgrey-800 caption"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >
@@ -41,10 +41,10 @@ exports[`Typography Should render caption 1`] = `
 
 exports[`Typography Should render disclaimer 1`] = `
 <p
-  className="font-inter text-dgrey-800 font-regular leading-14 text-10 tracking-very-wide"
+  className="font-inter text-dgrey-800 disclaimer"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >
@@ -52,12 +52,51 @@ exports[`Typography Should render disclaimer 1`] = `
 </p>
 `;
 
-exports[`Typography Should render h1 1`] = `
-<h1
-  className="font-inter text-dgrey-800 font-bold leading-72 text-64 tracking-tight"
+exports[`Typography Should render div with h1 styles 1`] = `
+<div
+  className="font-inter text-dgrey-800 h1"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
+    }
+  }
+>
+  Lorem ipsum dolor sit amet.
+</div>
+`;
+
+exports[`Typography Should render h1 1`] = `
+<h1
+  className="font-inter text-dgrey-800 h1"
+  style={
+    Object {
+      "textAlign": "left",
+    }
+  }
+>
+  Lorem ipsum dolor sit amet.
+</h1>
+`;
+
+exports[`Typography Should render h1 with className bg-red-200 1`] = `
+<h1
+  className="font-inter text-dgrey-800 h1 bg-red-200"
+  style={
+    Object {
+      "textAlign": "left",
+    }
+  }
+>
+  Lorem ipsum dolor sit amet.
+</h1>
+`;
+
+exports[`Typography Should render h1 with right alignment 1`] = `
+<h1
+  className="font-inter text-dgrey-800 h1"
+  style={
+    Object {
+      "textAlign": "right",
     }
   }
 >
@@ -67,10 +106,10 @@ exports[`Typography Should render h1 1`] = `
 
 exports[`Typography Should render h2 1`] = `
 <h2
-  className="font-inter text-dgrey-800 font-bold leading-64 text-56 tracking-semi-tight3"
+  className="font-inter text-dgrey-800 h2"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >
@@ -80,10 +119,10 @@ exports[`Typography Should render h2 1`] = `
 
 exports[`Typography Should render h3 1`] = `
 <h3
-  className="font-inter text-dgrey-800 font-bold leading-56 text-48 tracking-semi-tight3"
+  className="font-inter text-dgrey-800 h3"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >
@@ -93,10 +132,10 @@ exports[`Typography Should render h3 1`] = `
 
 exports[`Typography Should render h4 1`] = `
 <h4
-  className="font-inter text-dgrey-800 font-bold leading-48 text-40 tracking-semi-tight2"
+  className="font-inter text-dgrey-800 h4"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >
@@ -106,10 +145,10 @@ exports[`Typography Should render h4 1`] = `
 
 exports[`Typography Should render h5 1`] = `
 <h5
-  className="font-inter text-dgrey-800 font-bold leading-40 text-32 tracking-semi-tight1"
+  className="font-inter text-dgrey-800 h5"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >
@@ -119,10 +158,10 @@ exports[`Typography Should render h5 1`] = `
 
 exports[`Typography Should render h6 1`] = `
 <h6
-  className="font-inter text-dgrey-800 font-semibold leading-36 text-28 tracking-normal"
+  className="font-inter text-dgrey-800 h6"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >
@@ -132,10 +171,10 @@ exports[`Typography Should render h6 1`] = `
 
 exports[`Typography Should render hero 1`] = `
 <h1
-  className="font-inter text-dgrey-800 font-bold leading-80 text-72 tracking-very-tight"
+  className="font-inter text-dgrey-800 hero"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >
@@ -145,10 +184,10 @@ exports[`Typography Should render hero 1`] = `
 
 exports[`Typography Should render subtitle 1`] = `
 <h6
-  className="font-inter text-dgrey-800 font-regular leading-32 text-20 tracking-semi-wide"
+  className="font-inter text-dgrey-800 subtitle"
   style={
     Object {
-      "textAlign": undefined,
+      "textAlign": "left",
     }
   }
 >

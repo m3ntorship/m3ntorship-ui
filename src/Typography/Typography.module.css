@@ -1,0 +1,36 @@
+.hero {
+  @apply font-bold leading-80 text-72 tracking-very-tight;
+}
+.h1 {
+  @apply font-bold leading-72 text-64 tracking-tight;
+}
+.h2 {
+  @apply font-bold leading-64 text-56 tracking-semi-tight3;
+}
+.h3 {
+  @apply font-bold leading-56 text-48 tracking-semi-tight3;
+}
+.h4 {
+  @apply font-bold leading-48 text-40 tracking-semi-tight2;
+}
+.h5 {
+  @apply font-bold leading-40 text-32 tracking-semi-tight1;
+}
+.h6 {
+  @apply font-semi-bold leading-36 text-28 tracking-normal;
+}
+.subtitle {
+  @apply font-regular leading-32 text-20 tracking-semi-wide;
+}
+.body1 {
+  @apply font-regular leading-24 text-base tracking-semi-wide;
+}
+.body2 {
+  @apply font-regular leading-20 text-14 tracking-semi-wide;
+}
+.caption {
+  @apply font-regular leading-16 text-12 tracking-wide;
+}
+.disclaimer {
+  @apply font-regular leading-14 text-10 tracking-very-wide;
+}

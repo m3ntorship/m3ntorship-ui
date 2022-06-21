@@ -76,4 +76,28 @@ describe('Typography', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('Should render div with h1 styles', () => {
+    const tree = renderer.create(
+      <Typography variant="h1" component="div">
+        Lorem ipsum dolor sit amet.
+      </Typography>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('Should render h1 with right alignment', () => {
+    const tree = renderer.create(
+      <Typography variant="h1" align="right">
+        Lorem ipsum dolor sit amet.
+      </Typography>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('Should render h1 with className bg-red-200', () => {
+    const tree = renderer.create(
+      <Typography variant="h1" className="bg-red-200">
+        Lorem ipsum dolor sit amet.
+      </Typography>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

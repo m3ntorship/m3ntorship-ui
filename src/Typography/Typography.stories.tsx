@@ -7,6 +7,11 @@ import { TypographyProps } from './Typography.types';
 export default {
   title: 'Typography',
   component: Typography,
+  argTypes: {
+    component: {
+      control: { type: 'text' },
+    },
+  },
 } as Meta<typeof Typography>;
 
 const Template: Story<TypographyProps> = args => <Typography {...args} />;
@@ -17,4 +22,5 @@ Default.args = {
   children: 'Lorem ipsum dolor sit amet.',
   className: 'bg-red-200',
   align: 'left',
+  component: 'div',
 };
