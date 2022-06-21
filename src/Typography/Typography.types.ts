@@ -23,8 +23,3 @@ export interface TypographyProps
   /**The component used as the root node of the content. For example `div`, `span`, ...*/
   component?: ElementType;
 }
-export interface BaseTypographyProps
-  extends HTMLAttributes<HTMLHeadingElement>,
-    HTMLAttributes<HTMLParagraphElement> {
-  as: ElementType;
-}
