@@ -4,7 +4,7 @@ import React from 'react';
 import { Button } from './Button';
 
 export default {
-  title: 'Button component',
+  title: 'Button',
   component: Button,
 } as Meta<typeof Button>;
 
@@ -42,6 +42,15 @@ Neutral.args = {
   content: 'Neutral',
   color: 'neutral',
   variant: 'filled',
+  size: 'large',
+  disabled: false,
+};
+
+export const Ghost = Template.bind({});
+Ghost.args = {
+  content: 'Chost Primary',
+  color: 'primary',
+  variant: 'ghost',
   size: 'large',
   disabled: false,
 };

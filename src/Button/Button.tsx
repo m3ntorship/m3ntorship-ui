@@ -19,7 +19,7 @@ const Button = ({
         size={size}
         disabled={disabled}
         spicialClasses={classnames(
-          'disabled:text-disabled-text disabled:bg-action-background-disabled',
+          'disabled:text-disabled-text disabled:bg-neutral-fade',
           {
             // handle the color
             'bg-primary hover:bg-primary-hover active:bg-ba-900 text-white ':
@@ -32,8 +32,28 @@ const Button = ({
         )}
       />
     );
+  } else if (variant === 'ghost') {
+    return (
+      <BasedButton
+        content={content}
+        size={size}
+        disabled={disabled}
+        spicialClasses={classnames(
+          'disabled:text-disabled-text disabled:border-disabled-text disabled:hover:bg-transparent border-thin',
+          {
+            // handle the color
+            ' border-primary-border hover:bg-primary-ghost-hover hover:text-primary-hover active:text-ba-900 active:border-thick text-primary ':
+              color === 'primary',
+            'border-secondary-border hover:bg-secondary-ghost-hover hover:text-secondary-hover active:text-bb-900 active:border-thick text-secondary ':
+              color === 'secondary',
+            'border-dgrey-900 hover:bg-neutral-fade hover:text-dgrey-800 active:text-dgrey-900 active:border-thick text-neutral ':
+              color === 'neutral',
+          }
+        )}
+      />
+    );
   } else {
-    return <button>Test</button>;
+    return <BasedButton />;
   }
 };
 
@@ -48,7 +68,7 @@ const BasedButton = ({
   return (
     <button
       disabled={disabled}
-      className={classnames('rounded-med ', spicialClasses, {
+      className={classnames('rounded-med', spicialClasses, {
         // handle the sizes
         ' py-med px-lrg text-20 ': size === 'large',
         ' py-xs px-med text-base': size === 'medium',
