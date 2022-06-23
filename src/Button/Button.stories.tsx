@@ -10,46 +10,64 @@ export default {
 
 const Template: Story<typeof Button> = args => <Button {...args} />;
 
-export const Filled = Template.bind({});
-Filled.args = {
-  content: 'Filled Variant',
+export const Main = Template.bind({});
+Main.args = {
+  content: 'button Comp',
   color: 'primary',
   variant: 'filled',
   size: 'large',
   disabled: false,
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
-  content: 'primary',
+export const FilledPrimary = Template.bind({});
+FilledPrimary.args = {
+  content: 'Filled-primary',
   color: 'primary',
   variant: 'filled',
   size: 'large',
   disabled: false,
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  content: 'Secondary',
+export const FilledSecondary = Template.bind({});
+FilledSecondary.args = {
+  content: 'Filled-Secondary',
   color: 'secondary',
   variant: 'filled',
   size: 'large',
   disabled: false,
 };
 
-export const Neutral = Template.bind({});
-Neutral.args = {
-  content: 'Neutral',
+export const FilledNeutral = Template.bind({});
+FilledNeutral.args = {
+  content: 'Filled-Neutral',
   color: 'neutral',
   variant: 'filled',
   size: 'large',
   disabled: false,
 };
 
-export const Ghost = Template.bind({});
-Ghost.args = {
-  content: 'Chost Primary',
+export const GhostPrimary = Template.bind({});
+GhostPrimary.args = {
+  content: 'Chost-Primary',
   color: 'primary',
+  variant: 'ghost',
+  size: 'large',
+  disabled: false,
+};
+
+export const GhostSecondary = Template.bind({});
+GhostSecondary.args = {
+  content: 'Chost-Secondary',
+  color: 'secondary',
+  variant: 'ghost',
+  size: 'large',
+  disabled: false,
+};
+
+export const GhostNeutral = Template.bind({});
+GhostNeutral.args = {
+  content: 'Chost-Neutral',
+  color: 'neutral',
   variant: 'ghost',
   size: 'large',
   disabled: false,
