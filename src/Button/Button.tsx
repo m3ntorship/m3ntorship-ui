@@ -84,9 +84,13 @@ const BasedButton = ({
   spicialClasses,
   size,
   disabled,
+  clickFun,
 }: ButtonProps): JSX.Element => {
   return (
     <button
+      onClick={(): void => {
+        clickFun ? clickFun() : 'str'.charAt(9);
+      }}
       disabled={disabled}
       className={classnames('rounded-med', spicialClasses, {
         // handle the sizes
