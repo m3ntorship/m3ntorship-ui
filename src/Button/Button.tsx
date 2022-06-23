@@ -11,6 +11,7 @@ const Button = ({
   color,
   size,
   disabled,
+  clickFun,
 }: ButtonProps): JSX.Element => {
   if (variant === 'filled') {
     return (
@@ -18,6 +19,7 @@ const Button = ({
         content={content}
         size={size}
         disabled={disabled}
+        clickFun={clickFun}
         spicialClasses={classnames(
           'disabled:text-disabled-text disabled:bg-neutral-fade',
           {
@@ -38,6 +40,7 @@ const Button = ({
         content={content}
         size={size}
         disabled={disabled}
+        clickFun={clickFun}
         spicialClasses={classnames(
           'disabled:text-disabled-text disabled:border-disabled-text disabled:hover:bg-transparent border-thin active:border-thick',
           {
@@ -58,6 +61,7 @@ const Button = ({
         content={content}
         size={size}
         disabled={disabled}
+        clickFun={clickFun}
         spicialClasses={classnames(
           'disabled:text-disabled-text disabled:hover:bg-transparent',
           {
@@ -73,7 +77,7 @@ const Button = ({
       />
     );
   } else {
-    return <BasedButton />;
+    return <BasedButton clickFun={clickFun} />;
   }
 };
 
@@ -88,9 +92,7 @@ const BasedButton = ({
 }: ButtonProps): JSX.Element => {
   return (
     <button
-      onClick={(): void => {
-        clickFun ? clickFun() : 'str'.charAt(9);
-      }}
+      onClick={clickFun}
       disabled={disabled}
       className={classnames('rounded-med', spicialClasses, {
         // handle the sizes

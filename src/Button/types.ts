@@ -5,5 +5,5 @@ export interface ButtonProps {
   size?: 'large' | 'medium' | 'small';
   spicialClasses?: string;
   disabled?: true | false;
-  clickFun?: Function;
+  clickFun?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
