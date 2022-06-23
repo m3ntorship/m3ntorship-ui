@@ -8,7 +8,9 @@ export default {
   component: Button,
 } as Meta<typeof Button>;
 
-const Template: Story<typeof Button> = args => <Button {...args} />;
+const Template: Story<typeof Button> = args => (
+  <Button variant="filled" color="primary" size="large" {...args} />
+);
 
 export const Main = Template.bind({});
 Main.args = {
