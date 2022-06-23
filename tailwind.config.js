@@ -68,11 +68,11 @@ module.exports = {
       'success-content': 'rgba(var(--color-success-content), 1)',
       'success-background': 'rgba(var(--color-success), 0.1)',
       // Action Colors
-      action: 'rgba(var(--color-success), <alpha-value>)',
-      'action-disabled': 'rgba(var(--color-success), 0.5)',
-      'action-background-selected': 'rgba(var(--color-success), 0.3)',
-      'action-background-disabled': 'rgba(var(--color-success), 0.15)',
-      'action-background-hover': 'rgba(var(--color-success), 0.1)',
+      action: 'rgba(var(--color-action), <alpha-value>)',
+      'action-disabled': 'rgba(var(--color-action), 0.5)',
+      'action-background-selected': 'rgba(var(--color-action), 0.3)',
+      'action-background-disabled': 'rgba(var(--color-action), 0.15)',
+      'action-background-hover': 'rgba(var(--color-action), 0.1)',
       // Misc Colors
       'misc-snackbar-bg': 'rgba(var(--color-misc), 0.8)',
       'misc-overlay': 'rgba(var(--color-misc), 0.6)',
