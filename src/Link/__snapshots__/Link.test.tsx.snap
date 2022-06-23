@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link Should render Default Link 1`] = `
+<a
+  className="font-inter text-primary-text font-regular px-xs tracking-normal hover:bg-action-background-hover visited:font-semi-bold text-base leading-24"
+  href="#"
+>
+  Lorem ipsum dolor sit amet.
+</a>
+`;
+
+exports[`Link Should render Disabled Link 1`] = `
+<a
+  className="font-inter text-primary-text font-regular px-xs tracking-normal hover:bg-action-background-hover visited:font-semi-bold text-base leading-24 text-disabled-text hover:bg-background-surface pointer-events-none cursor-not-allowed"
+  href="/"
+>
+  Lorem ipsum dolor sit amet.
+</a>
+`;
+
+exports[`Link Should render Small Disabled Link 1`] = `
+<a
+  className="font-inter text-primary-text font-regular px-xs tracking-normal hover:bg-action-background-hover visited:font-semi-bold text-14 leading-20 text-disabled-text hover:bg-background-surface pointer-events-none cursor-not-allowed"
+  href="/"
+>
+  Lorem ipsum dolor sit amet.
+</a>
+`;
+
+exports[`Link Should render Small Link 1`] = `
+<a
+  className="font-inter text-primary-text font-regular px-xs tracking-normal hover:bg-action-background-hover visited:font-semi-bold text-14 leading-20"
+  href="#"
+>
+  Lorem ipsum dolor sit amet.
+</a>
+`;
