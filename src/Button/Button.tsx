@@ -39,14 +39,34 @@ const Button = ({
         size={size}
         disabled={disabled}
         spicialClasses={classnames(
-          'disabled:text-disabled-text disabled:border-disabled-text disabled:hover:bg-transparent border-thin',
+          'disabled:text-disabled-text disabled:border-disabled-text disabled:hover:bg-transparent border-thin active:border-thick',
           {
             // handle the color
-            ' border-primary-border hover:bg-primary-ghost-hover hover:text-primary-hover active:text-ba-900 active:border-thick text-primary ':
+            ' border-primary-border hover:bg-primary-ghost-hover hover:text-primary-hover active:text-ba-900 text-primary ':
               color === 'primary',
-            'border-secondary-border hover:bg-secondary-ghost-hover hover:text-secondary-hover active:text-bb-900 active:border-thick text-secondary ':
+            'border-secondary-border hover:bg-secondary-ghost-hover hover:text-secondary-hover active:text-bb-900 text-secondary ':
               color === 'secondary',
-            'border-dgrey-900 hover:bg-neutral-fade hover:text-dgrey-800 active:text-dgrey-900 active:border-thick text-neutral ':
+            'border-dgrey-900 hover:bg-neutral-fade hover:text-dgrey-800 active:text-dgrey-900  text-neutral ':
+              color === 'neutral',
+          }
+        )}
+      />
+    );
+  } else if (variant === 'text') {
+    return (
+      <BasedButton
+        content={content}
+        size={size}
+        disabled={disabled}
+        spicialClasses={classnames(
+          'disabled:text-disabled-text disabled:hover:bg-transparent',
+          {
+            // handle the color
+            'hover:bg-primary-ghost-hover hover:text-primary-hover active:text-ba-900 text-primary ':
+              color === 'primary',
+            'hover:bg-secondary-ghost-hover hover:text-secondary-hover active:text-bb-900 text-secondary ':
+              color === 'secondary',
+            'hover:bg-neutral-fade hover:text-dgrey-800 active:text-dgrey-900 text-neutral ':
               color === 'neutral',
           }
         )}
