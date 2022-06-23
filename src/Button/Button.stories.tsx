@@ -72,3 +72,30 @@ GhostNeutral.args = {
   size: 'large',
   disabled: false,
 };
+
+export const TextPrimary = Template.bind({});
+TextPrimary.args = {
+  content: 'Text-Primary',
+  color: 'primary',
+  variant: 'text',
+  size: 'large',
+  disabled: false,
+};
+
+export const TextSecondary = Template.bind({});
+TextSecondary.args = {
+  content: 'Text-Secondary',
+  color: 'secondary',
+  variant: 'text',
+  size: 'large',
+  disabled: false,
+};
+
+export const TextNeutral = Template.bind({});
+TextNeutral.args = {
+  content: 'Text-Neutral',
+  color: 'neutral',
+  variant: 'text',
+  size: 'large',
+  disabled: false,
+};
