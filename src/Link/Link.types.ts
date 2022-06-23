@@ -5,7 +5,7 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   /**Changes the size of the Link.*/
   size?: 'small';
   /**The content of the component*/
-  children?: ReactNode;
+  children: ReactNode;
   /**Transforms the Link to Disabled mode*/
   disabled?: boolean;
 }
