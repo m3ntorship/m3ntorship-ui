@@ -8,6 +8,11 @@ const {
 } = require('./utils/tailwind/tailwindHelpers.js');
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './stories/*'],
+  safelist: [
+    {
+      pattern: /text-(center|inherit|justify|left|right|start|end)/,
+    },
+  ],
   theme: {
     colors: {
       // Colors extracted from the figma tokens file
