@@ -15,11 +15,10 @@ const Link: FC<LinkProps> = ({
   return (
     <a
       className={classNames(
-        'font-inter text-primary-text font-regular px-xs tracking-normal hover:bg-action-background-hover visited:font-semi-bold',
+        'font-inter text-primary-text font-regular px-xs tracking-normal hover:bg-action-background-hover visited:font-semi-bold rounded-sm text-base leading-24',
         {
-          'text-base leading-24': size !== 'small',
           'text-14 leading-20': size === 'small',
-          'text-disabled-text hover:bg-background-surface pointer-events-none cursor-not-allowed':
+          'text-disabled-text hover:bg-background-surface pointer-events-none':
             disabled,
         },
         className
