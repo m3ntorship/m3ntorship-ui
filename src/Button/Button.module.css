@@ -1,0 +1,4 @@
+.test {
+  border: 5px solid #f00;
+  @apply my-xxxxl;
+}

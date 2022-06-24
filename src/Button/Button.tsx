@@ -1,6 +1,8 @@
 import classnames from 'classnames';
 import React from 'react';
 
+import csStyle from './Button.module.css';
+
 import { ButtonProps } from './types';
 
 // https://github.com/m3ntorship/pickify-frontend/blob/develop/modules/shared/components/atoms/Button/Button.tsx
@@ -57,6 +59,7 @@ const Button = ({
       onClick={clickFun}
       disabled={disabled}
       className={classnames(
+        csStyle.test,
         styles.shared.classes,
         styles.variants[variant].shared,
         styles.shared.sizes[size],
