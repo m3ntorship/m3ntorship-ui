@@ -1,11 +1,11 @@
 import { AnchorHTMLAttributes, ReactNode } from 'react';
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  /**Specifies the URL of the page the link goes to.*/
+  /**Specifies the URL of the page the link goes to. */
   href?: string;
-  /**Changes the size of the Link.*/
+  /**Changes the size of the Link. */
   size?: 'small';
-  /**The content of the component*/
+  /**The content of the component */
   children: ReactNode;
-  /**Transforms the Link to Disabled mode*/
+  /**Transforms the Link to Disabled mode */
   disabled?: boolean;
 }
