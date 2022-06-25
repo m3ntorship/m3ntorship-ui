@@ -5,15 +5,15 @@
 
 /* button sizes */
 .size-large {
-  @apply py-med px-lrg text-20;
+  @apply py-med px-lrg button-l;
 }
 
 .size-medium {
-  @apply py-xs px-med text-base;
+  @apply py-xs px-med button-m;
 }
 
 .size-small {
-  @apply py-xs px-sm text-14;
+  @apply py-xs px-sm button-s;
 }
 
 /* ______________________________Variant filled styles________________________________ */
@@ -65,4 +65,18 @@
 
 .variant-text-neutral {
   @apply hover:bg-neutral-fade hover:text-dgrey-800 active:text-dgrey-900 text-neutral;
+}
+
+/* Change Button sizes (l - m - s) */
+
+.button-l {
+  @apply font-medium leading-24 text-20 tracking-wide;
+}
+
+.button-m {
+  @apply font-medium leading-22 text-base tracking-wide;
+}
+
+.button-s {
+  @apply font-medium leading-20 text-14 tracking-wide;
 }
