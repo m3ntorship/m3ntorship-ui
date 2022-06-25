@@ -1,4 +1,68 @@
-.test {
-  border: 5px solid #f00;
-  @apply my-xxxxl;
+/* the shared styles arround all buttons */
+.shared {
+  @apply rounded-med;
+}
+
+/* button sizes */
+.size-large {
+  @apply py-med px-lrg text-20;
+}
+
+.size-medium {
+  @apply py-xs px-med text-base;
+}
+
+.size-small {
+  @apply py-xs px-sm text-14;
+}
+
+/* ______________________________Variant filled styles________________________________ */
+.variant-filled-shared {
+  @apply disabled:text-disabled-text disabled:bg-neutral-fade;
+}
+
+.variant-filled-primary {
+  @apply bg-primary hover:bg-primary-hover active:bg-ba-900 text-white;
+}
+
+.variant-filled-secondary {
+  @apply bg-secondary hover:bg-secondary-hover active:bg-bb-900 text-white;
+}
+
+.variant-filled-neutral {
+  @apply bg-neutral hover:bg-dgrey-700 active:bg-dgrey-900 text-white;
+}
+
+/* ______________________________Variant ghost styles________________________________ */
+.variant-ghost-shared {
+  @apply disabled:text-disabled-text disabled:border-disabled-text disabled:hover:bg-transparent border-thin active:border-thick;
+}
+
+.variant-ghost-primary {
+  @apply border-primary-border hover:bg-primary-ghost-hover hover:text-primary-hover active:text-ba-900 text-primary;
+}
+
+.variant-ghost-secondary {
+  @apply border-secondary-border hover:bg-secondary-ghost-hover hover:text-secondary-hover active:text-bb-900 text-secondary;
+}
+
+.variant-ghost-neutral {
+  @apply border-dgrey-900 hover:bg-neutral-fade hover:text-dgrey-800 active:text-dgrey-900  text-neutral;
+}
+
+/* ______________________________Variant text styles________________________________ */
+.variant-text-shared {
+  @apply disabled:text-disabled-text disabled:hover:bg-transparent;
+}
+
+.variant-text-primary {
+  @apply hover:bg-primary-ghost-hover hover:text-primary-hover active:text-ba-900 text-primary;
+}
+
+.variant-text-secondary {
+  @apply hover:bg-secondary-ghost-hover hover:text-secondary-hover active:text-bb-900 text-secondary;
+}
+
+.variant-text-neutral {
+  @apply hover:bg-neutral-fade hover:text-dgrey-800 active:text-dgrey-900 text-neutral;
 }
