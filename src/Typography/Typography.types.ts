@@ -16,8 +16,10 @@ export interface TypographyProps
     | 'body2'
     | 'caption'
     | 'disclaimer';
+  /**Applies the custom styles using a custom classNames.*/
+  className?: string;
   /**The content of the component*/
-  children?: ReactNode;
+  children: ReactNode;
   /**Set the text-align on the component.*/
   align?: 'center' | 'inherit' | 'justify' | 'left' | 'right' | 'start' | 'end';
   /**The component used as the root node of the content. For example `div`, `span`, ...*/

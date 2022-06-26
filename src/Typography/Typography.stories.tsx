@@ -18,9 +18,29 @@ const Template: Story<TypographyProps> = args => <Typography {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  variant: 'h1',
+  children: 'Lorem ipsum dolor sit amet.',
+};
+
+export const WithVariant = Template.bind({});
+WithVariant.args = {
+  children: 'Lorem ipsum dolor sit amet.',
+  variant: 'hero',
+};
+
+export const WithClassName = Template.bind({});
+WithClassName.args = {
   children: 'Lorem ipsum dolor sit amet.',
   className: 'bg-red-200',
-  align: 'left',
+};
+
+export const WithAlignment = Template.bind({});
+WithAlignment.args = {
+  children: 'Lorem ipsum dolor sit amet.',
+  align: 'center',
+};
+
+export const WithComponent = Template.bind({});
+WithComponent.args = {
+  children: 'Lorem ipsum dolor sit amet.',
   component: 'div',
 };

@@ -2,12 +2,7 @@
 
 exports[`Typography Should render body1 1`] = `
 <p
-  className="font-inter text-dgrey-800 body1"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+  className="font-inter text-dgrey-800 text-left body1"
 >
   Lorem ipsum dolor sit amet.
 </p>
@@ -15,12 +10,7 @@ exports[`Typography Should render body1 1`] = `
 
 exports[`Typography Should render body2 1`] = `
 <p
-  className="font-inter text-dgrey-800 body2"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+  className="font-inter text-dgrey-800 text-left body2"
 >
   Lorem ipsum dolor sit amet.
 </p>
@@ -28,12 +18,7 @@ exports[`Typography Should render body2 1`] = `
 
 exports[`Typography Should render caption 1`] = `
 <p
-  className="font-inter text-dgrey-800 caption"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+  className="font-inter text-dgrey-800 text-left caption"
 >
   Lorem ipsum dolor sit amet.
 </p>
@@ -41,12 +26,7 @@ exports[`Typography Should render caption 1`] = `
 
 exports[`Typography Should render disclaimer 1`] = `
 <p
-  className="font-inter text-dgrey-800 disclaimer"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+  className="font-inter text-dgrey-800 text-left disclaimer"
 >
   Lorem ipsum dolor sit amet.
 </p>
@@ -54,143 +34,88 @@ exports[`Typography Should render disclaimer 1`] = `
 
 exports[`Typography Should render div with h1 styles 1`] = `
 <div
-  className="font-inter text-dgrey-800 h1"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+  className="font-inter text-dgrey-800 text-left h1"
 >
   Lorem ipsum dolor sit amet.
 </div>
 `;
 
 exports[`Typography Should render h1 1`] = `
-<h1
-  className="font-inter text-dgrey-800 h1"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+<p
+  className="font-inter text-dgrey-800 text-left h1"
 >
   Lorem ipsum dolor sit amet.
-</h1>
+</p>
 `;
 
 exports[`Typography Should render h1 with className bg-red-200 1`] = `
-<h1
-  className="font-inter text-dgrey-800 h1 bg-red-200"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+<p
+  className="font-inter text-dgrey-800 text-left h1 bg-red-200"
 >
   Lorem ipsum dolor sit amet.
-</h1>
+</p>
 `;
 
 exports[`Typography Should render h1 with right alignment 1`] = `
-<h1
-  className="font-inter text-dgrey-800 h1"
-  style={
-    Object {
-      "textAlign": "right",
-    }
-  }
+<p
+  className="font-inter text-dgrey-800 text-right h1"
 >
   Lorem ipsum dolor sit amet.
-</h1>
+</p>
 `;
 
 exports[`Typography Should render h2 1`] = `
-<h2
-  className="font-inter text-dgrey-800 h2"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+<p
+  className="font-inter text-dgrey-800 text-left h2"
 >
   Lorem ipsum dolor sit amet.
-</h2>
+</p>
 `;
 
 exports[`Typography Should render h3 1`] = `
-<h3
-  className="font-inter text-dgrey-800 h3"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+<p
+  className="font-inter text-dgrey-800 text-left h3"
 >
   Lorem ipsum dolor sit amet.
-</h3>
+</p>
 `;
 
 exports[`Typography Should render h4 1`] = `
-<h4
-  className="font-inter text-dgrey-800 h4"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+<p
+  className="font-inter text-dgrey-800 text-left h4"
 >
   Lorem ipsum dolor sit amet.
-</h4>
+</p>
 `;
 
 exports[`Typography Should render h5 1`] = `
-<h5
-  className="font-inter text-dgrey-800 h5"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+<p
+  className="font-inter text-dgrey-800 text-left h5"
 >
   Lorem ipsum dolor sit amet.
-</h5>
+</p>
 `;
 
 exports[`Typography Should render h6 1`] = `
-<h6
-  className="font-inter text-dgrey-800 h6"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+<p
+  className="font-inter text-dgrey-800 text-left h6"
 >
   Lorem ipsum dolor sit amet.
-</h6>
+</p>
 `;
 
 exports[`Typography Should render hero 1`] = `
-<h1
-  className="font-inter text-dgrey-800 hero"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+<p
+  className="font-inter text-dgrey-800 text-left hero"
 >
   Lorem ipsum dolor sit amet.
-</h1>
+</p>
 `;
 
 exports[`Typography Should render subtitle 1`] = `
-<h6
-  className="font-inter text-dgrey-800 subtitle"
-  style={
-    Object {
-      "textAlign": "left",
-    }
-  }
+<p
+  className="font-inter text-dgrey-800 text-left subtitle"
 >
   Lorem ipsum dolor sit amet.
-</h6>
+</p>
 `;
