@@ -2,15 +2,14 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 import { Button } from './Button';
+import { ButtonProps } from './types';
 
 export default {
   title: 'Button',
   component: Button,
 } as Meta<typeof Button>;
 
-const Template: Story<typeof Button> = args => (
-  <Button variant="filled" color="primary" size="large" {...args} />
-);
+const Template: Story<ButtonProps> = args => <Button {...args} />;
 
 export const Main = Template.bind({});
 Main.args = {
@@ -20,7 +19,7 @@ Main.args = {
   size: 'large',
   disabled: false,
 };
-
+/**Test The comment Here */
 export const FilledPrimary = Template.bind({});
 FilledPrimary.args = {
   content: 'Filled-primary',
@@ -28,6 +27,14 @@ FilledPrimary.args = {
   variant: 'filled',
   size: 'large',
   disabled: false,
+};
+FilledPrimary.parameters = {
+  docs: {
+    description: {
+      story:
+        'Test The filled variant with primary color here with a large type**',
+    },
+  },
 };
 
 export const FilledSecondary = Template.bind({});

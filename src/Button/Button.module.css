@@ -68,6 +68,7 @@
 }
 
 /* Change Button sizes (l - m - s) */
+/* The width in figma file is 179 bt in the storybook 173 ___ but the hight is equal  */
 
 .button-l {
   @apply font-medium leading-24 text-20 tracking-wide;
