@@ -13,7 +13,7 @@
 }
 
 .size-small {
-  @apply py-xs px-sm button-s;
+  @apply py-xxs px-sm button-s;
 }
 
 /* ______________________________Variant filled styles________________________________ */
