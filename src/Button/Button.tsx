@@ -5,8 +5,7 @@ import styles from './Button.module.css';
 
 import { ButtonProps } from './types';
 
-// https://github.com/m3ntorship/pickify-frontend/blob/develop/modules/shared/components/atoms/Button/Button.tsx
-
+/**Button Component uses to implement all your button styles like (variant, size, color, etc...) all you have to do is create your button styles here and copy the component structure to use it in your website */
 const Button = ({
   content,
   variant,
