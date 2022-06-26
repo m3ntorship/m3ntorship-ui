@@ -1,6 +1,6 @@
 /* the shared styles arround all buttons */
 .shared {
-  @apply rounded-med;
+  @apply rounded-med font-inter;
 }
 
 /* button sizes */
