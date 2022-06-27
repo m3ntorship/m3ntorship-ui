@@ -18,8 +18,7 @@ const Link: FC<LinkProps> = ({
         'font-inter text-primary-text font-regular px-xs tracking-normal hover:bg-action-background-hover visited:font-semi-bold rounded-sm text-base leading-24',
         {
           'text-14 leading-20': size === 'small',
-          'text-disabled-text hover:bg-background-surface pointer-events-none':
-            disabled,
+          'text-disabled-text hover:bg-background-surface pointer-events-none': disabled,
         },
         className
       )}
