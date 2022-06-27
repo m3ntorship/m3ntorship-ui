@@ -9,5 +9,5 @@ export interface ButtonProps {
   size: 'large' | 'medium' | 'small';
   /**test the disabled button styles by changing this value to true */
   disabled?: true | false;
-  clickFun?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }

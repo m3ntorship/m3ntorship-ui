@@ -12,11 +12,11 @@ const Button = ({
   color,
   size,
   disabled,
-  clickFun,
+  onClick,
 }: ButtonProps): JSX.Element => {
   return (
     <button
-      onClick={clickFun}
+      onClick={onClick}
       disabled={disabled}
       className={classnames(
         styles.shared,
