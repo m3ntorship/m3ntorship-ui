@@ -64,6 +64,9 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "tsdx lint --max-warnings=0 "
+    ],
+    "src/**/*.{json,css,scss,md}": [
+      "prettier -w"
     ]
   },
   "dependencies": {
