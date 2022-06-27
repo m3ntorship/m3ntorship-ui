@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 
 import { LinkProps } from './Link.types';
 
-/** The Link component is an element for navigation.*/
+/** The Link component is an element for navigation. */
 const Link: FC<LinkProps> = ({
   className,
   size,
