@@ -28,14 +28,6 @@ FilledPrimary.args = {
   size: 'large',
   disabled: false,
 };
-FilledPrimary.parameters = {
-  docs: {
-    description: {
-      story:
-        'Test The filled variant with primary color here with a large type**',
-    },
-  },
-};
 
 export const FilledSecondary = Template.bind({});
 FilledSecondary.args = {

@@ -18,7 +18,7 @@
 
 /* ______________________________Variant filled styles________________________________ */
 .variant-filled-shared {
-  @apply disabled:text-disabled-text disabled:bg-neutral-fade;
+  @apply disabled:text-disabled-text disabled:hover:text-disabled-text disabled:bg-neutral-fade disabled:hover:bg-neutral-fade;
 }
 
 .variant-filled-primary {
@@ -35,7 +35,7 @@
 
 /* ______________________________Variant ghost styles________________________________ */
 .variant-ghost-shared {
-  @apply disabled:text-disabled-text disabled:border-disabled-text disabled:hover:bg-transparent outline outline-1 active:outline-2 outline-bb-600;
+  @apply disabled:text-disabled-text disabled:hover:text-disabled-text disabled:outline-disabled-text disabled:hover:bg-transparent outline outline-1 disabled:active:outline-1 active:outline-2 outline-bb-600;
 }
 
 .variant-ghost-primary {
@@ -52,7 +52,7 @@
 
 /* ______________________________Variant text styles________________________________ */
 .variant-text-shared {
-  @apply disabled:text-disabled-text disabled:hover:bg-transparent;
+  @apply disabled:text-disabled-text disabled:hover:text-disabled-text disabled:hover:bg-transparent;
 }
 
 .variant-text-primary {
