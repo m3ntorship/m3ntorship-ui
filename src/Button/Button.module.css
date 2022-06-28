@@ -39,15 +39,15 @@
 }
 
 .variant-ghost-primary {
-  @apply hover:bg-primary-ghost-hover hover:text-primary-hover active:text-ba-900 text-primary;
+  @apply outline-primary-border hover:bg-primary-ghost-hover hover:text-primary-hover active:text-ba-900 text-primary;
 }
 
 .variant-ghost-secondary {
-  @apply hover:bg-secondary-ghost-hover hover:text-secondary-hover active:text-bb-900 text-secondary;
+  @apply outline-secondary-border hover:bg-secondary-ghost-hover hover:text-secondary-hover active:text-bb-900 text-secondary;
 }
 
 .variant-ghost-neutral {
-  @apply hover:bg-neutral-fade hover:text-dgrey-800 active:text-dgrey-900  text-neutral;
+  @apply outline-dgrey-900 hover:bg-neutral-fade hover:text-dgrey-800 active:text-dgrey-900  text-neutral;
 }
 
 /* ______________________________Variant text styles________________________________ */
