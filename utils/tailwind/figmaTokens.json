@@ -205,6 +205,10 @@
       "type": "spacing"
     },
     "xxs": {
+      "value": "6",
+      "type": "spacing"
+    },
+    "xxxs": {
       "value": "4",
       "type": "spacing"
     },
