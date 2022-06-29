@@ -19,7 +19,7 @@ const Typography: FC<TypographyProps> = ({
     <Tag
       className={classNames(
         'font-inter text-dgrey-800',
-        `text-${align}`,
+        `text-${align}`, //we added the text alignment classes to "safelist" key in the tailwind config file to make sure that Tailwind generates them.
         styles[variant],
         className
       )}
