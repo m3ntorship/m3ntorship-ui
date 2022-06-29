@@ -71,6 +71,8 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
-    "react-test-renderer": "^18.2.0"
+    "identity-obj-proxy": "^3.0.0",
+    "react-test-renderer": "^18.2.0",
+    "storybook-css-modules-preset": "^1.1.1"
   }
 }
