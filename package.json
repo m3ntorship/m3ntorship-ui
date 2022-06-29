@@ -21,7 +21,6 @@
     "build-storybook": "build-storybook",
     "prepare": "husky install",
     "typecheck": "tsc --noEmit --incremental false",
-    "format": "prettier -w .",
     "build-tailwind": "npx tailwindcss -o ./dist/tailwind.css --minify"
   },
   "peerDependencies": {
@@ -64,8 +63,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "tsdx lint --max-warnings=0 ",
-      "prettier -w"
+      "tsdx lint --max-warnings=0 "
     ],
     "src/**/*.{json,css,scss,md}": [
       "prettier -w"
