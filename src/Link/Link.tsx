@@ -9,7 +9,7 @@ const Link: FC<LinkProps> = ({
   size,
   children,
   disabled,
-  href,
+  href = '/',
   ...props
 }) => {
   return (
@@ -22,7 +22,7 @@ const Link: FC<LinkProps> = ({
         },
         className
       )}
-      href={disabled || !href ? '/' : href}
+      href={disabled ? '/' : href}
       {...props}
     >
       {children}
