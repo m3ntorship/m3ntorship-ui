@@ -17,35 +17,12 @@ const IconButton: FC<IIconButton> = ({
   clicked = (): null => null,
 }) => {
   const iconButtonClasses = classNames(
-    `group ${styles['icon-btn']}`,
+    `group ${styles['icon-btn']} `,
+    styles[`icon-btn-${shape}-${variant}`],
     {
       'p-sm': size === 'lg',
       'p-xs': size === 'md',
       'p-xxs': size === 'sm',
-    },
-    {
-      [styles['icon-btn-filled-primary']]:
-        variant === 'primary' && shape === 'filled',
-      [styles['icon-btn-filled-secondary']]:
-        variant === 'secondary' && shape === 'filled',
-      [styles['icon-btn-filled-neutral']]:
-        variant === 'neutral' && shape === 'filled',
-    },
-    {
-      [styles['icon-btn-ghost-primary']]:
-        variant === 'primary' && shape === 'ghost',
-      [styles['icon-btn-ghost-secondary']]:
-        variant === 'secondary' && shape === 'ghost',
-      [styles['icon-btn-ghost-neutral']]:
-        variant === 'neutral' && shape === 'ghost',
-    },
-    {
-      [styles['icon-btn-blank-primary']]:
-        variant === 'primary' && shape === 'blank',
-      [styles['icon-btn-blank-secondary']]:
-        variant === 'secondary' && shape === 'blank',
-      [styles['icon-btn-blank-neutral']]:
-        variant === 'neutral' && shape === 'blank',
     },
     buttonClasses
   );
