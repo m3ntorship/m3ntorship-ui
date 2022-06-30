@@ -10,7 +10,7 @@ const IconButton: FC<IIconButton> = ({
   size = 'md',
   children,
   type = 'button',
-  className,
+  buttonClasses,
   variant = 'primary',
   shape = 'filled',
   disabled = false,
@@ -47,7 +47,7 @@ const IconButton: FC<IIconButton> = ({
       [styles['icon-btn-blank-neutral']]:
         variant === 'neutral' && shape === 'blank',
     },
-    className
+    buttonClasses
   );
 
   const svgClasses = classNames({
