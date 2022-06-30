@@ -1,9 +1,9 @@
 import conditionalProperties from 'classnames';
-import React, { FC, ReactElement } from 'react';
+import React, { FC } from 'react';
 
-import { IBaseIcon } from './IIcon.d';
+import { IBaseIcon } from './IIconButton.d';
 
-const BaseIcon: FC<IBaseIcon> = ({ size, children }): ReactElement => {
+const BaseIcon: FC<IBaseIcon> = ({ size, children, fillColor }) => {
   const baseIconSizes = conditionalProperties({
     '32': size === 'lg',
     '24': size === 'md',
@@ -14,10 +14,11 @@ const BaseIcon: FC<IBaseIcon> = ({ size, children }): ReactElement => {
     return React.cloneElement(children, {
       width: baseIconSizes,
       height: baseIconSizes,
+      fill: fillColor,
     });
   }
 
-  return <>children</>;
+  return null;
 };
 
 export { BaseIcon };
