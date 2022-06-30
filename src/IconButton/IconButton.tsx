@@ -14,10 +14,10 @@ const IconButton: FC<IIconButton> = ({
   variant = 'primary',
   shape = 'filled',
   disabled = false,
-  clicked = (): void => null,
+  clicked = (): null => null,
 }) => {
   const iconButtonClasses = classNames(
-    styles['icon-btn'],
+    `group ${styles['icon-btn']}`,
     {
       'p-sm': size === 'lg',
       'p-xs': size === 'md',
@@ -50,6 +50,23 @@ const IconButton: FC<IIconButton> = ({
     className
   );
 
+  const svgClasses = classNames({
+    'fill-action-disabled': disabled,
+    'fill-white': shape === 'filled',
+    'fill-primary group-hover:fill-primary-hover group-active:fill-ba-900':
+      (shape === 'ghost' || shape === 'blank') &&
+      variant === 'primary' &&
+      !disabled,
+    'fill-secondary group-hover:fill-secondary-hover group-active:fill-bb-900':
+      (shape === 'ghost' || shape === 'blank') &&
+      variant === 'secondary' &&
+      !disabled,
+    'fill-neutral group-hover:fill-dgrey-800 group-active:fill-dgrey-900':
+      (shape === 'ghost' || shape === 'blank') &&
+      variant === 'neutral' &&
+      !disabled,
+  });
+
   return (
     <button
       type={type}
@@ -57,7 +74,9 @@ const IconButton: FC<IIconButton> = ({
       disabled={disabled}
       onClick={clicked}
     >
-      <BaseIcon size={size}>{children}</BaseIcon>
+      <BaseIcon svgClasses={svgClasses} size={size}>
+        {children}
+      </BaseIcon>
     </button>
   );
 };

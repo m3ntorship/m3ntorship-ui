@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 export interface IBaseIcon {
   size?: 'lg' | 'md' | 'sm';
   children: ReactNode;
-  fillColor?: string;
+  svgClasses?: string;
 }
 
 export interface IIconButton extends IBaseIcon {

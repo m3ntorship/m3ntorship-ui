@@ -4,42 +4,42 @@
 
 /* start filled icon button */
 .icon-btn-filled-primary {
-  @apply bg-primary hover:bg-primary-hover focus:bg-ba-900 disabled:bg-action-background-disabled;
+  @apply bg-primary hover:bg-primary-hover active:bg-ba-900 disabled:bg-action-background-disabled;
 }
 
 .icon-btn-filled-secondary {
-  @apply bg-secondary hover:bg-secondary-hover focus:bg-bb-900 disabled:bg-action-background-disabled;
+  @apply bg-secondary hover:bg-secondary-hover active:bg-bb-900 disabled:bg-action-background-disabled;
 }
 
 .icon-btn-filled-neutral {
-  @apply bg-action hover:bg-dgrey-700 focus:bg-dgrey-900 disabled:bg-action-background-disabled;
+  @apply bg-action hover:bg-dgrey-700 active:bg-dgrey-900 disabled:bg-action-background-disabled;
 }
 /* end filled icon button */
 
 /* start ghost icon button */
 .icon-btn-ghost-primary {
-  @apply ring ring-primary-border bg-white hover:bg-primary-ghost-hover focus:bg-primary-ghost-hover focus:ring-ba-900 disabled:ring-action-background-disabled;
+  @apply ring ring-primary-border bg-white hover:bg-primary-ghost-hover active:bg-primary-ghost-hover active:ring-ba-900 disabled:ring-action-background-disabled;
 }
 
 .icon-btn-ghost-secondary {
-  @apply ring ring-secondary-border bg-white hover:bg-secondary-ghost-hover focus:bg-secondary-ghost-hover focus:ring-bb-900 disabled:ring-action-background-disabled;
+  @apply ring ring-secondary-border bg-white hover:bg-secondary-ghost-hover active:bg-secondary-ghost-hover active:ring-bb-900 disabled:ring-action-background-disabled;
 }
 
 .icon-btn-ghost-neutral {
-  @apply ring ring-action bg-white hover:bg-action-background-hover focus:bg-action-background-hover focus:ring-dgrey-900 disabled:ring-action-background-disabled;
+  @apply ring ring-action bg-white hover:bg-action-background-hover active:bg-action-background-hover active:ring-dgrey-900 disabled:ring-action-background-disabled;
 }
 /* end ghost icon button */
 
 /* start blank icon button */
 .icon-btn-blank-primary {
-  @apply bg-white hover:bg-primary-ghost-hover focus:bg-primary-ghost-hover;
+  @apply bg-white hover:bg-primary-ghost-hover active:bg-primary-ghost-hover;
 }
 
 .icon-btn-blank-secondary {
-  @apply bg-white hover:bg-secondary-ghost-hover focus:bg-secondary-ghost-hover;
+  @apply bg-white hover:bg-secondary-ghost-hover active:bg-secondary-ghost-hover;
 }
 
 .icon-btn-blank-neutral {
-  @apply bg-white hover:bg-action-background-hover focus:bg-action-background-hover;
+  @apply bg-white hover:bg-action-background-hover active:bg-action-background-hover;
 }
 /* end blank icon button */
