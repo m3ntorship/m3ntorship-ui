@@ -11,14 +11,14 @@ const IconButton: FC<IIconButton> = ({
   children,
   type = 'button',
   buttonClasses,
-  variant = 'primary',
-  shape = 'filled',
+  color = 'primary',
+  variant = 'filled',
   disabled = false,
   clicked = (): null => null,
 }) => {
   const iconButtonClasses = classNames(
     `group ${styles['icon-btn']} `,
-    styles[`icon-btn-${shape}-${variant}`],
+    styles[`icon-btn-${variant}-${color}`],
     {
       'p-sm': size === 'lg',
       'p-xs': size === 'md',
@@ -29,18 +29,18 @@ const IconButton: FC<IIconButton> = ({
 
   const svgClasses = classNames({
     'fill-action-disabled': disabled,
-    'fill-white': shape === 'filled',
+    'fill-white': variant === 'filled',
     'fill-primary group-hover:fill-primary-hover group-active:fill-ba-900':
-      (shape === 'ghost' || shape === 'blank') &&
-      variant === 'primary' &&
+      (variant === 'ghost' || variant === 'blank') &&
+      color === 'primary' &&
       !disabled,
     'fill-secondary group-hover:fill-secondary-hover group-active:fill-bb-900':
-      (shape === 'ghost' || shape === 'blank') &&
-      variant === 'secondary' &&
+      (variant === 'ghost' || variant === 'blank') &&
+      color === 'secondary' &&
       !disabled,
     'fill-neutral group-hover:fill-dgrey-800 group-active:fill-dgrey-900':
-      (shape === 'ghost' || shape === 'blank') &&
-      variant === 'neutral' &&
+      (variant === 'ghost' || variant === 'blank') &&
+      color === 'neutral' &&
       !disabled,
   });
 

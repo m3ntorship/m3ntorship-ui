@@ -13,9 +13,9 @@ export interface IIconButton extends IBaseIcon {
   /**the type of the button element */
   type?: 'button' | 'submit' | 'reset' | undefined;
   /**colors of the icon button */
-  variant?: 'primary' | 'secondary' | 'neutral';
+  color?: 'primary' | 'secondary' | 'neutral';
   /**the visibility of background & border colors for the icon button */
-  shape?: 'filled' | 'ghost' | 'blank';
+  variant?: 'filled' | 'ghost' | 'blank';
   /**add additional classes for the icon button */
   buttonClasses?: string;
   /**disable any interactions for the icon button */
