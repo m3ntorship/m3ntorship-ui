@@ -1,12 +1,14 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const postcss = require('rollup-plugin-postcss');
+
 module.exports = {
-  rollup(config, options) {
+  rollup(config) {
     config.plugins.push(
       postcss({
         plugins: [],
+        modules: true,
         inject: false,
-        // only write out CSS for the first bundle (avoids pointless extra files):
-        extract: !!options.writeMeta,
+        extract: true,
       })
     );
     return config;
