@@ -21,7 +21,7 @@
     "build-storybook": "build-storybook",
     "prepare": "husky install",
     "typecheck": "tsc --noEmit --incremental false",
-    "build-tailwind": "npx tailwindcss -o ./dist/tailwind.css --minify",
+    "build-tailwind": "npx tailwindcss -o ./dist/m3ntorship_ui.css --minify",
     "semantic-release": "semantic-release --branches dev"
   },
   "peerDependencies": {
@@ -58,6 +58,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-is": "^18.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "semantic-release": "^19.0.3",
     "size-limit": "^7.0.8",
     "storybook-css-modules-preset": "^1.1.1",
