@@ -22,7 +22,8 @@
     "prepare": "husky install",
     "typecheck": "tsc --noEmit --incremental false",
     "build-tailwind": "npx tailwindcss -o ./dist/m3ntorship_ui.css --minify",
-    "semantic-release": "semantic-release --branches dev"
+    "semantic-release": "semantic-release --branches dev",
+    "chromatic": "chromatic"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -49,6 +50,7 @@
     "@types/react-test-renderer": "^18.0.0",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.7.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.0",
