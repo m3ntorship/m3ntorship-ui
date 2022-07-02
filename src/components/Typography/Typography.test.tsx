@@ -1,7 +1,7 @@
 import React from 'react';
 import * as renderer from 'react-test-renderer';
 
-import { Typography } from './Typography';
+import { Typography } from '.';
 
 describe('Typography', () => {
   it('Should render h1', () => {
