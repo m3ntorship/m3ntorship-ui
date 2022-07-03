@@ -11,14 +11,8 @@ export default {
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;
 
-export const Main = Template.bind({});
-Main.args = {
-  content: 'button Comp',
-  color: 'primary',
-  variant: 'filled',
-  size: 'large',
-  disabled: false,
-};
+export const Default = Template.bind({});
+Default.args = {};
 /**Test The comment Here */
 export const FilledPrimary = Template.bind({});
 FilledPrimary.args = {
