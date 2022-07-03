@@ -1,6 +1,6 @@
 export interface ButtonProps {
-  /**Add The text wil be in the button */
-  content?: string;
+  /**Add The elements or text wil be in the button */
+  children?: JSX.Element | string;
   /**Choose wich variant you button is */
   variant?: 'filled' | 'ghost' | 'text';
   /**Choose you button color */
