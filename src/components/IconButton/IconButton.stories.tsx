@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
-import { IconButton } from './IconButton';
+import { IconButton } from '.';
 import { IIconButton } from './IIconButton.d';
-import Star from '../assets/icons/star.svg';
+import Star from '../../assets/icons/star.svg';
 
 export default {
   title: 'IconButton',
