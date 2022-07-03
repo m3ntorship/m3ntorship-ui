@@ -7,8 +7,13 @@ export interface ButtonProps {
   /**Choose you button color */
   color?: 'primary' | 'secondary' | 'neutral';
   /**Change the size here */
-  size?: 'large' | 'medium' | 'small';
+  size?: 'lg' | 'md' | 'sm';
   /**test the disabled button styles by changing this value to true */
   disabled?: true | false;
+  /**do some action when icon button is clicked */
   clicked?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  /**the type of the button element */
+  type?: 'button' | 'submit' | 'reset' | undefined;
+  /**add additional classes for button element */
+  classes?: string;
 }

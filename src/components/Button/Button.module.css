@@ -4,15 +4,15 @@
 }
 
 /* button sizes */
-.size-large {
+.size-lg {
   @apply py-med px-lrg button-l;
 }
 
-.size-medium {
+.size-md {
   @apply py-xs px-med button-m;
 }
 
-.size-small {
+.size-sm {
   @apply py-xxs px-sm button-s;
 }
 

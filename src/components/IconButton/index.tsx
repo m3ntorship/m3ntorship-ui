@@ -5,6 +5,7 @@ import styles from './IconButton.module.css';
 
 import { BaseIcon } from './BaseIcon';
 import { IIconButton } from './IIconButton.d';
+import { Button } from '../Button';
 
 const IconButton: FC<IIconButton> = ({
   size = 'md',
@@ -17,13 +18,8 @@ const IconButton: FC<IIconButton> = ({
   clicked = (): null => null,
 }) => {
   const iconButtonClasses = classNames(
-    `group ${styles['icon-btn']} `,
-    styles[`icon-btn-${variant}-${color}`],
-    {
-      'p-sm': size === 'lg',
-      'p-xs': size === 'md',
-      'p-xxs': size === 'sm',
-    },
+    `group ${styles['icon-btn']}`,
+    styles[`size-${size}`],
     buttonClasses
   );
 
@@ -31,30 +27,33 @@ const IconButton: FC<IIconButton> = ({
     'fill-action-disabled': disabled,
     'fill-white': variant === 'filled',
     'fill-primary group-hover:fill-primary-hover group-active:fill-ba-900':
-      (variant === 'ghost' || variant === 'blank') &&
+      (variant === 'ghost' || variant === 'text') &&
       color === 'primary' &&
       !disabled,
     'fill-secondary group-hover:fill-secondary-hover group-active:fill-bb-900':
-      (variant === 'ghost' || variant === 'blank') &&
+      (variant === 'ghost' || variant === 'text') &&
       color === 'secondary' &&
       !disabled,
     'fill-neutral group-hover:fill-dgrey-800 group-active:fill-dgrey-900':
-      (variant === 'ghost' || variant === 'blank') &&
+      (variant === 'ghost' || variant === 'text') &&
       color === 'neutral' &&
       !disabled,
   });
 
   return (
-    <button
+    <Button
       type={type}
-      className={iconButtonClasses}
+      classes={iconButtonClasses}
       disabled={disabled}
-      onClick={clicked}
+      clicked={clicked}
+      size={size}
+      color={color}
+      variant={variant}
     >
       <BaseIcon svgClasses={svgClasses} size={size}>
         {children}
       </BaseIcon>
-    </button>
+    </Button>
   );
 };
 

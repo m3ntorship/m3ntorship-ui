@@ -75,7 +75,7 @@ BlankPrimary.args = {
   size: 'md',
   type: 'button',
   color: 'primary',
-  variant: 'blank',
+  variant: 'text',
   disabled: false,
 };
 
@@ -84,7 +84,7 @@ BlankSecondary.args = {
   size: 'md',
   type: 'button',
   color: 'secondary',
-  variant: 'blank',
+  variant: 'text',
   disabled: false,
 };
 
@@ -93,7 +93,7 @@ BlankNeutral.args = {
   size: 'md',
   type: 'button',
   color: 'neutral',
-  variant: 'blank',
+  variant: 'text',
   disabled: false,
 };
 
