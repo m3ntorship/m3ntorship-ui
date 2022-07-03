@@ -5,6 +5,7 @@ const {
   oneLayerWithNoPixel,
   themeShadowBox,
   themeLetterSpacing,
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
 } = require('./utils/tailwind/tailwindHelpers.js');
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './stories/*'],
