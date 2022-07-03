@@ -8,15 +8,15 @@ import { ButtonProps } from './types';
 /**Button Component uses to implement all your button styles like (variant, size, color, etc...) all you have to do is create your button styles here and copy the component structure to use it in your website */
 const Button: FC<ButtonProps> = ({
   children,
-  variant,
-  color,
-  size,
-  disabled,
-  onClick,
+  variant = 'filled',
+  color = 'primary',
+  size = 'md',
+  disabled = false,
+  clicked = (): null => null,
 }) => {
   return (
     <button
-      onClick={onClick}
+      onClick={clicked}
       disabled={disabled}
       className={classnames(
         styles.shared,
