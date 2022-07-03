@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
 export interface ButtonProps {
-  /**Add The text wil be in the button */
-  content?: string;
-  /**Choose wich variant you button is */
+  /**Add The text or component which will be wrapped by the Button component */
+  children: ReactNode | string;
+  /**Choose which variant you button is */
   variant: 'filled' | 'ghost' | 'text';
   /**Choose you button color */
   color: 'primary' | 'secondary' | 'neutral';
