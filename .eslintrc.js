@@ -41,6 +41,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'error',
+    '@typescript-eslint/interface-name-prefix': 'off',
     '@next/next/no-img-element': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
