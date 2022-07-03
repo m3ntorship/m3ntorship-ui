@@ -10,7 +10,17 @@ describe('Button', () => {
   });
   it('should return ghost disabled button', () => {
     const tree = renderer.create(
-      <Button content="secondary disabled" variant="ghost" disabled={true} />
+      <Button variant="ghost" disabled={true}>
+        Disabled Button
+      </Button>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should return Button with stront tag child', () => {
+    const tree = renderer.create(
+      <Button variant="ghost" disabled={true}>
+        <strong> This is Test </strong>
+      </Button>
     );
     expect(tree).toMatchSnapshot();
   });

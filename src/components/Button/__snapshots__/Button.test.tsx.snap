@@ -8,11 +8,22 @@ exports[`Button should render button component with {Default inner text, and cla
 </button>
 `;
 
+exports[`Button should return Button with stront tag child 1`] = `
+<button
+  className="shared variant-ghost-shared size-large variant-ghost-primary"
+  disabled={true}
+>
+  <strong>
+     This is Test 
+  </strong>
+</button>
+`;
+
 exports[`Button should return ghost disabled button 1`] = `
 <button
   className="shared variant-ghost-shared size-large variant-ghost-primary"
   disabled={true}
 >
-  secondary disabled
+  Disabled Button
 </button>
 `;
