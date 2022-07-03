@@ -3,10 +3,10 @@ import React, { FC } from 'react';
 
 import styles from './Button.module.css';
 
-import { ButtonProps } from './types';
+import { IButtonProps } from './IButton.d';
 
 /**Button Component uses to implement all your button styles like (variant, size, color, etc...) all you have to do is create your button styles here and copy the component structure to use it in your website */
-const Button: FC<ButtonProps> = ({
+const Button: FC<IButtonProps> = ({
   children,
   variant = 'filled',
   color = 'primary',

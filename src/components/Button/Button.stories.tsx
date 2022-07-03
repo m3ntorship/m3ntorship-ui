@@ -2,14 +2,14 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 import { Button } from '.';
-import { ButtonProps } from './types';
+import { IButtonProps } from './IButton.d';
 
 export default {
   title: 'Button',
   component: Button,
 } as Meta<typeof Button>;
 
-const Template: Story<ButtonProps> = args => (
+const Template: Story<IButtonProps> = args => (
   <Button {...args}>click me</Button>
 );
 

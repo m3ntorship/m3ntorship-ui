@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 import { IconButton } from '.';
-import { IIconButton } from './IIconButton.d';
+import { IButtonProps } from '../Button/IButton.d';
 import Star from '../../assets/icons/star.svg';
 
 export default {
@@ -10,7 +10,7 @@ export default {
   component: IconButton,
 } as Meta<typeof IconButton>;
 
-const Template: Story<IIconButton> = args => (
+const Template: Story<IButtonProps> = args => (
   <IconButton {...args}>
     <Star />
   </IconButton>

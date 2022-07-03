@@ -4,14 +4,14 @@ import React, { FC } from 'react';
 import styles from './IconButton.module.css';
 
 import { BaseIcon } from './BaseIcon';
-import { IIconButton } from './IIconButton.d';
 import { Button } from '../Button';
+import { IButtonProps } from '../Button/IButton.d';
 
-const IconButton: FC<IIconButton> = ({
+const IconButton: FC<IButtonProps> = ({
   size = 'md',
   children,
   type = 'button',
-  buttonClasses,
+  classes,
   color = 'primary',
   variant = 'filled',
   disabled = false,
@@ -20,12 +20,12 @@ const IconButton: FC<IIconButton> = ({
   const iconButtonClasses = classNames(
     `group ${styles['icon-btn']}`,
     styles[`size-${size}`],
-    buttonClasses
+    classes
   );
 
   const svgClasses = classNames({
     'fill-action-disabled': disabled,
-    'fill-white': variant === 'filled',
+    'fill-white': variant === 'filled' && !disabled,
     'fill-primary group-hover:fill-primary-hover group-active:fill-ba-900':
       (variant === 'ghost' || variant === 'text') &&
       color === 'primary' &&
