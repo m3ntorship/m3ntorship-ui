@@ -11,18 +11,12 @@ export default {
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;
 
-export const Main = Template.bind({});
-Main.args = {
-  content: 'button Comp',
-  color: 'primary',
-  variant: 'filled',
-  size: 'large',
-  disabled: false,
-};
+export const Default = Template.bind({});
+Default.args = {};
 /**Test The comment Here */
 export const FilledPrimary = Template.bind({});
 FilledPrimary.args = {
-  content: 'Filled-primary',
+  children: 'Filled-primary',
   color: 'primary',
   variant: 'filled',
   size: 'large',
@@ -31,7 +25,7 @@ FilledPrimary.args = {
 
 export const FilledSecondary = Template.bind({});
 FilledSecondary.args = {
-  content: 'Filled-Secondary',
+  children: 'Filled-Secondary',
   color: 'secondary',
   variant: 'filled',
   size: 'large',
@@ -40,7 +34,7 @@ FilledSecondary.args = {
 
 export const FilledNeutral = Template.bind({});
 FilledNeutral.args = {
-  content: 'Filled-Neutral',
+  children: 'Filled-Neutral',
   color: 'neutral',
   variant: 'filled',
   size: 'large',
@@ -49,7 +43,7 @@ FilledNeutral.args = {
 
 export const GhostPrimary = Template.bind({});
 GhostPrimary.args = {
-  content: 'Chost-Primary',
+  children: 'Chost-Primary',
   color: 'primary',
   variant: 'ghost',
   size: 'large',
@@ -58,7 +52,7 @@ GhostPrimary.args = {
 
 export const GhostSecondary = Template.bind({});
 GhostSecondary.args = {
-  content: 'Chost-Secondary',
+  children: 'Chost-Secondary',
   color: 'secondary',
   variant: 'ghost',
   size: 'large',
@@ -67,7 +61,7 @@ GhostSecondary.args = {
 
 export const GhostNeutral = Template.bind({});
 GhostNeutral.args = {
-  content: 'Chost-Neutral',
+  children: 'Chost-Neutral',
   color: 'neutral',
   variant: 'ghost',
   size: 'large',
@@ -76,7 +70,7 @@ GhostNeutral.args = {
 
 export const TextPrimary = Template.bind({});
 TextPrimary.args = {
-  content: 'Text-Primary',
+  children: 'Text-Primary',
   color: 'primary',
   variant: 'text',
   size: 'large',
@@ -85,7 +79,7 @@ TextPrimary.args = {
 
 export const TextSecondary = Template.bind({});
 TextSecondary.args = {
-  content: 'Text-Secondary',
+  children: 'Text-Secondary',
   color: 'secondary',
   variant: 'text',
   size: 'large',
@@ -94,7 +88,7 @@ TextSecondary.args = {
 
 export const TextNeutral = Template.bind({});
 TextNeutral.args = {
-  content: 'Text-Neutral',
+  children: 'Text-Neutral',
   color: 'neutral',
   variant: 'text',
   size: 'large',

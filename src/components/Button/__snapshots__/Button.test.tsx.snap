@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render button component with {Default inner text, and className = {shared variant-filled-shared size-large variant-filled-primary}} 1`] = `
+<button
+  className="shared variant-filled-shared size-large variant-filled-primary"
+>
+  Default
+</button>
+`;
+
+exports[`Button should return Button with stront tag child 1`] = `
+<button
+  className="shared variant-ghost-shared size-large variant-ghost-primary"
+  disabled={true}
+>
+  <strong>
+     This is Test 
+  </strong>
+</button>
+`;
+
+exports[`Button should return ghost disabled button 1`] = `
+<button
+  className="shared variant-ghost-shared size-large variant-ghost-primary"
+  disabled={true}
+>
+  Disabled Button
+</button>
+`;
