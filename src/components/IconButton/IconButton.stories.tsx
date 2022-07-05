@@ -1,89 +1,110 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
-import { Button } from '.';
-import { IButtonProps } from './IButton.d';
+import { IconButton } from '.';
+import { IButtonProps } from '../Button/IButton.d';
+import Star from '../../assets/icons/star.svg';
 
 export default {
-  title: 'Button',
-  component: Button,
-} as Meta<typeof Button>;
+  title: 'IconButton',
+  component: IconButton,
+} as Meta<typeof IconButton>;
 
 const Template: Story<IButtonProps> = args => (
-  <Button {...args}>click me</Button>
+  <IconButton {...args}>
+    <Star />
+  </IconButton>
 );
 
 export const Default = Template.bind({});
 Default.args = {};
-/**Test The comment Here */
+
 export const FilledPrimary = Template.bind({});
 FilledPrimary.args = {
+  size: 'md',
+  type: 'button',
   color: 'primary',
   variant: 'filled',
-  size: 'lg',
   disabled: false,
 };
 
 export const FilledSecondary = Template.bind({});
 FilledSecondary.args = {
+  size: 'md',
+  type: 'button',
   color: 'secondary',
   variant: 'filled',
-  size: 'lg',
   disabled: false,
 };
 
 export const FilledNeutral = Template.bind({});
 FilledNeutral.args = {
+  size: 'md',
+  type: 'button',
   color: 'neutral',
   variant: 'filled',
-  size: 'lg',
   disabled: false,
 };
 
 export const GhostPrimary = Template.bind({});
 GhostPrimary.args = {
+  size: 'md',
+  type: 'button',
   color: 'primary',
   variant: 'ghost',
-  size: 'lg',
   disabled: false,
 };
 
 export const GhostSecondary = Template.bind({});
 GhostSecondary.args = {
+  size: 'md',
+  type: 'button',
   color: 'secondary',
   variant: 'ghost',
-  size: 'lg',
   disabled: false,
 };
 
 export const GhostNeutral = Template.bind({});
 GhostNeutral.args = {
+  size: 'md',
+  type: 'button',
   color: 'neutral',
   variant: 'ghost',
-  size: 'lg',
   disabled: false,
 };
 
-export const TextPrimary = Template.bind({});
-TextPrimary.args = {
+export const BlankPrimary = Template.bind({});
+BlankPrimary.args = {
+  size: 'md',
+  type: 'button',
   color: 'primary',
   variant: 'text',
-  size: 'lg',
   disabled: false,
 };
 
-export const TextSecondary = Template.bind({});
-TextSecondary.args = {
+export const BlankSecondary = Template.bind({});
+BlankSecondary.args = {
+  size: 'md',
+  type: 'button',
   color: 'secondary',
   variant: 'text',
-  size: 'lg',
   disabled: false,
 };
 
-export const TextNeutral = Template.bind({});
-TextNeutral.args = {
+export const BlankNeutral = Template.bind({});
+BlankNeutral.args = {
+  size: 'md',
+  type: 'button',
   color: 'neutral',
   variant: 'text',
-  size: 'lg',
   disabled: false,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  size: 'md',
+  type: 'button',
+  color: 'primary',
+  variant: 'filled',
+  disabled: true,
 };
