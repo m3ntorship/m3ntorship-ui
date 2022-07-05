@@ -16,6 +16,9 @@ const Template: Story<IButtonProps> = args => (
   </IconButton>
 );
 
+export const Default = Template.bind({});
+Default.args = {};
+
 export const FilledPrimary = Template.bind({});
 FilledPrimary.args = {
   size: 'md',
