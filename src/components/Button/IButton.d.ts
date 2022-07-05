@@ -11,9 +11,9 @@ export interface IButtonProps {
   /**test the disabled button styles by changing this value to true */
   disabled?: true | false;
   /**do some action when icon button is clicked */
-  clicked?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   /**the type of the button element */
   type?: 'button' | 'submit' | 'reset' | undefined;
   /**add additional classes for button element */
-  classes?: string;
+  className?: string;
 }

@@ -7,26 +7,26 @@ import { IButtonProps } from './IButton.d';
 
 /**Button Component uses to implement all your button styles like (variant, size, color, etc...) all you have to do is create your button styles here and copy the component structure to use it in your website */
 const Button: FC<IButtonProps> = ({
-  children,
+  children = 'Default',
   variant = 'filled',
   color = 'primary',
   size = 'md',
   disabled = false,
-  clicked = (): null => null,
+  onClick = (): null => null,
   type = 'button',
-  classes,
+  className,
 }) => {
   const buttonClasses = classnames(
     styles.shared,
     styles[`variant-${variant}-shared`],
     styles[`size-${size}`],
     styles[`variant-${variant}-${color}`],
-    classes
+    className
   );
 
   return (
     <button
-      onClick={clicked}
+      onClick={onClick}
       disabled={disabled}
       type={type}
       className={buttonClasses}

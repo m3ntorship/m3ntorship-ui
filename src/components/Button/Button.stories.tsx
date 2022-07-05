@@ -13,13 +13,8 @@ const Template: Story<IButtonProps> = args => (
   <Button {...args}>click me</Button>
 );
 
-export const Main = Template.bind({});
-Main.args = {
-  color: 'primary',
-  variant: 'filled',
-  size: 'lg',
-  disabled: false,
-};
+export const Default = Template.bind({});
+Default.args = {};
 /**Test The comment Here */
 export const FilledPrimary = Template.bind({});
 FilledPrimary.args = {

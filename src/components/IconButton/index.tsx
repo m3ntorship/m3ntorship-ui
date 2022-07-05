@@ -11,16 +11,16 @@ const IconButton: FC<IButtonProps> = ({
   size = 'md',
   children,
   type = 'button',
-  classes,
+  className,
   color = 'primary',
   variant = 'filled',
   disabled = false,
-  clicked = (): null => null,
+  onClick = (): null => null,
 }) => {
   const iconButtonClasses = classNames(
     `group ${styles['icon-btn']}`,
     styles[`size-${size}`],
-    classes
+    className
   );
 
   const svgClasses = classNames({
@@ -43,9 +43,9 @@ const IconButton: FC<IButtonProps> = ({
   return (
     <Button
       type={type}
-      classes={iconButtonClasses}
+      className={iconButtonClasses}
       disabled={disabled}
-      clicked={clicked}
+      onClick={onClick}
       size={size}
       color={color}
       variant={variant}
