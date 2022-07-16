@@ -1,0 +1,48 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Button } from './index';
+
+<Meta title="Button" component={Button} />
+
+export const Template = args => <Button {...args} />;
+
+# Button
+
+Button allows Users to perform actions.
+
+## Variants
+
+Users can change variant of the button, by passing `variant` prop.
+
+<Canvas>
+  <Button>Default</Button>
+  <Button variant="ghost">Ghost</Button>
+  <Button variant="text">Text</Button>
+</Canvas>
+
+## Sizes
+
+Users can change size of the button, by passing `size` prop.
+
+<Canvas>
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+</Canvas>
+
+## Colors
+
+Users can change color of the button, by passing `color` prop.
+
+<Canvas>
+  <Button color="primary">Primary</Button>
+  <Button color="secondary">Secondary</Button>
+  <Button color="neutral">Neutral</Button>
+</Canvas>
+
+## Disabled
+
+Users can disable button, by passing `disabled` prop.
+
+<Canvas>
+  <Button disabled>Primary</Button>
+</Canvas>
