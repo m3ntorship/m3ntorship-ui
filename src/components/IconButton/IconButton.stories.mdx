@@ -1,0 +1,70 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { IconButton } from './index';
+
+import Star from '../../assets/icons/star.svg';
+
+<Meta title="IconButton" component={IconButton} />
+
+export const Template = args => <Button {...args} />;
+
+# IconButton
+
+Icon Button allows Users to perform actions.
+
+## Variants
+
+Users can change variant of the icon button, by passing `variant` prop.
+
+<Canvas>
+  <IconButton>
+    <Star />
+  </IconButton>
+  <IconButton variant="ghost">
+    <Star />
+  </IconButton>
+  <IconButton variant="text">
+    <Star />
+  </IconButton>
+</Canvas>
+
+## Sizes
+
+Users can change size of the icon button, by passing `size` prop.
+
+<Canvas>
+  <IconButton size="sm">
+    <Star />
+  </IconButton>
+  <IconButton size="md">
+    <Star />
+  </IconButton>
+  <IconButton size="lg">
+    <Star />
+  </IconButton>
+</Canvas>
+
+## Colors
+
+Users can change color of the icon button, by passing `color` prop.
+
+<Canvas>
+  <IconButton color="primary">
+    <Star />
+  </IconButton>
+  <IconButton color="secondary">
+    <Star />
+  </IconButton>
+  <IconButton color="neutral">
+    <Star />
+  </IconButton>
+</Canvas>
+
+## Disabled
+
+Users can disable icon button, by passing `disabled` prop.
+
+<Canvas>
+  <IconButton disabled>
+    <Star />
+  </IconButton>
+</Canvas>
