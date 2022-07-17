@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Typography } from './index';
+
+<Meta title="Typography" component={Typography} />
+
+export const Template = args => <Typography {...args} />;
+
+# Typography
+
+Typography component makes it easier to use default set of typography styles.
+
+## Variants
+
+Users can change the style of the typography component by passing `variant` prop.
+
+<Canvas>
+  <Typography variant="hero">
+    Hero: Almost before we knew it, we had left the ground.
+  </Typography>
+  <Typography variant="h1">
+    H1: Almost before we knew it, we had left the ground.
+  </Typography>
+  <Typography variant="h2">
+    H2: Almost before we knew it, we had left the ground.
+  </Typography>
+  <Typography variant="h3">
+    H3: Almost before we knew it, we had left the ground.
+  </Typography>
+  <Typography variant="h4">
+    H4: Almost before we knew it, we had left the ground.
+  </Typography>
+  <Typography variant="h5">
+    H5: Almost before we knew it, we had left the ground.
+  </Typography>
+  <Typography variant="h6">
+    H6: Almost before we knew it, we had left the ground.
+  </Typography>
+</Canvas>
+
+## Semantic Element
+
+Users can change the semantic element of the typography component by passing `component` prop.
+
+```jsx
+// This will be rendered as `p`
+<Typography component="p">
+  Paragraph: Almost before we knew it, we had left the ground.
+</Typography>
+
+// This will be rendered as `h1`
+<Typography component="h1">
+  Paragraph: Almost before we knew it, we had left the ground.
+</Typography>
+```
