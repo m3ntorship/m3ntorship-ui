@@ -15,8 +15,12 @@ Link allows users to move from page to page, underneeth the hood it renders an `
 Link component comes in two sizes, the default one and the small one.
 
 <Canvas>
-  <Link>Small</Link>
-  <Link size="small">Small</Link>
+  <Story name="Default Size" args={{children: "Default Size"}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Small Size" args={{size: "small", children: "Small Size"}}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 ## Disabled
@@ -24,5 +28,7 @@ Link component comes in two sizes, the default one and the small one.
 Link component can be disabled by passing `disabled` prop.
 
 <Canvas>
-  <Link disabled>Disabled</Link>
+  <Story name="Disabled" args={{disabled: true, children: "Disabled"}}>
+    {Template.bind({})}
+  </Story>
 </Canvas>

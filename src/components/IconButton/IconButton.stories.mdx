@@ -5,7 +5,7 @@ import Star from '../../assets/icons/star.svg';
 
 <Meta title="IconButton" component={IconButton} />
 
-export const Template = args => <Button {...args} />;
+export const Template = args => <IconButton {...args} />;
 
 # IconButton
 
@@ -16,15 +16,15 @@ Icon Button allows Users to perform actions.
 Users can change variant of the icon button, by passing `variant` prop.
 
 <Canvas>
-  <IconButton>
-    <Star />
-  </IconButton>
-  <IconButton variant="ghost">
-    <Star />
-  </IconButton>
-  <IconButton variant="text">
-    <Star />
-  </IconButton>
+  <Story name="Default" args={{children: <Star />}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Ghost" args={{variant:"ghost", children: <Star />}}>
+    {Template.bind({})}
+  </Story>
+ <Story name="Text" args={{variant:"text", children: <Star />}}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 ## Sizes
@@ -32,15 +32,15 @@ Users can change variant of the icon button, by passing `variant` prop.
 Users can change size of the icon button, by passing `size` prop.
 
 <Canvas>
-  <IconButton size="sm">
-    <Star />
-  </IconButton>
-  <IconButton size="md">
-    <Star />
-  </IconButton>
-  <IconButton size="lg">
-    <Star />
-  </IconButton>
+  <Story name="Small" args={{size:"sm", children: <Star />}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Medium" args={{size:"md", children: <Star />}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Large" args={{size:"lg", children: <Star />}}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 ## Colors
@@ -48,15 +48,15 @@ Users can change size of the icon button, by passing `size` prop.
 Users can change color of the icon button, by passing `color` prop.
 
 <Canvas>
-  <IconButton color="primary">
-    <Star />
-  </IconButton>
-  <IconButton color="secondary">
-    <Star />
-  </IconButton>
-  <IconButton color="neutral">
-    <Star />
-  </IconButton>
+  <Story name="Primary" args={{color:"primary", children: <Star />}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Secondary" args={{color:"secondary", children: <Star />}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Neutral" args={{color:"neutral", children: <Star />}}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 ## Disabled
@@ -64,7 +64,7 @@ Users can change color of the icon button, by passing `color` prop.
 Users can disable icon button, by passing `disabled` prop.
 
 <Canvas>
-  <IconButton disabled>
-    <Star />
-  </IconButton>
+  <Story name="Disabled" args={{disabled: true, children: <Star />}}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
