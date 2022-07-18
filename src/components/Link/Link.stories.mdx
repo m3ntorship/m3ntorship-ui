@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Link } from './index';
+
+<Meta title="Link" component={Link} />
+
+export const Template = args => <Link {...args} />;
+
+# Link
+
+Link allows users to move from page to page, underneeth the hood it renders an `<a>` element.
+
+
+## Sizes
+
+Link component comes in two sizes, the default one and the small one.
+
+<Canvas>
+  <Story name="Default Size" args={{children: "Default Size"}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Small Size" args={{size: "small", children: "Small Size"}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+Link component can be disabled by passing `disabled` prop.
+
+<Canvas>
+  <Story name="Disabled" args={{disabled: true, children: "Disabled"}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

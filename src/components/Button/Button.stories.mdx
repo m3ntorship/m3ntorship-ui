@@ -14,9 +14,9 @@ Button allows Users to perform actions.
 Users can change variant of the button, by passing `variant` prop.
 
 <Canvas>
-  <Button>Default</Button>
-  <Button variant="ghost">Ghost</Button>
-  <Button variant="text">Text</Button>
+  <Story name="Default">{Template.bind({})}</Story>
+  <Story name="Ghost" args={{variant: "ghost", children: "Ghost"}}>{Template.bind({})}</Story>
+  <Story name="Text" args={{variant: "text", children: "Text"}}>{Template.bind({})}</Story>
 </Canvas>
 
 ## Sizes
@@ -24,9 +24,9 @@ Users can change variant of the button, by passing `variant` prop.
 Users can change size of the button, by passing `size` prop.
 
 <Canvas>
-  <Button size="sm">Small</Button>
-  <Button size="md">Medium</Button>
-  <Button size="lg">Large</Button>
+  <Story name="Small" args={{size: "sm", children: "Small"}}>{Template.bind({})}</Story>
+  <Story name="Medium" args={{size: "md", children: "Medium"}}>{Template.bind({})}</Story>
+  <Story name="Large" args={{size: "lg", children: "Large"}}>{Template.bind({})}</Story>
 </Canvas>
 
 ## Colors
@@ -34,9 +34,9 @@ Users can change size of the button, by passing `size` prop.
 Users can change color of the button, by passing `color` prop.
 
 <Canvas>
-  <Button color="primary">Primary</Button>
-  <Button color="secondary">Secondary</Button>
-  <Button color="neutral">Neutral</Button>
+  <Story name="Primary" args={{color: "primary", children: "Primary"}}>{Template.bind({})}</Story>
+  <Story name="Secondary" args={{color: "secondary", children: "Secondary"}}>{Template.bind({})}</Story>
+  <Story name="Neutral" args={{color: "neutral", children: "Neutral"}}>{Template.bind({})}</Story>
 </Canvas>
 
 ## Disabled
@@ -44,5 +44,5 @@ Users can change color of the button, by passing `color` prop.
 Users can disable button, by passing `disabled` prop.
 
 <Canvas>
-  <Button disabled>Primary</Button>
+  <Story name="Disabled" args={{disabled: true, children: "Disabled"}}>{Template.bind({})}</Story>
 </Canvas>
