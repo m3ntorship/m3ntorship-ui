@@ -1,0 +1,21 @@
+.shared {
+  @apply rounded-med font-inter  text-white;
+}
+.variant-primary {
+  @apply bg-primary;
+}
+.variant-secondary {
+  @apply bg-secondary;
+}
+.variant-warning {
+  @apply bg-warning;
+}
+.variant-info {
+  @apply bg-info;
+}
+.variant-error {
+  @apply bg-error;
+}
+.variant-success {
+  @apply bg-success;
+}
