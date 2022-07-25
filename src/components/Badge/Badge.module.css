@@ -1,5 +1,5 @@
 .shared {
-  @apply rounded-med font-inter  text-white;
+  @apply rounded-med font-inter  text-white text-12 py-xxxs px-xs;
 }
 .variant-primary {
   @apply bg-primary;

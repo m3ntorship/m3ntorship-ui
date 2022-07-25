@@ -14,7 +14,7 @@ const Badge: FC<IBadgeProps> = ({
     styles[`variant-${color}`],
     className
   );
-  return <div className={BadgeClasses}>{children}</div>;
+  return <b className={BadgeClasses}>{children}</b>;
 };
 
 export { Badge };
