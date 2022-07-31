@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Avatar } from './index';
+
+<Meta title="Avatar" component={Avatar} />
+
+export const Template = args => <Avatar {...args} />;
+
+# Avatar
+
+Avatar show the user image or a text in a circle.
+
+## Variants
+
+You can use the avatar as image or as text.
+
+###  Text Avatar
+
+fot the text avatar, You should pass the first character of first name/last name. it's recomended to just pass 1 or 2 characters
+
+You can use it in 3 sizes : sm | md | lg
+
+<Canvas>
+  <Story name="Avatar-text-sm" args={{variant: "text", text: "ab", size:"sm"}}>{Template.bind({})}</Story>
+  <Story name="Avatar-text-md" args={{variant: "text", text: "ab", size:"md"}}>{Template.bind({})}</Story>
+  <Story name="Avatar-text-lg" args={{variant: "text", text: "ab", size:"lg"}}>{Template.bind({})}</Story>   
+</Canvas>
+
+###  Image Avatar
+
+Image avatar is a nice-circled image.
+
+You can use it in 3 sizes : sm | md | lg
+
+<Canvas>
+  <Story name="Avatar-image-sm" args={{variant: "image",  imageURL:"https://picsum.photos/50/50/", size:"sm"}}>{Template.bind({})}</Story>
+  <Story name="Avatar-image-md" args={{variant: "image",  imageURL:"https://picsum.photos/50/50/", size:"md"}}>{Template.bind({})}</Story>
+  <Story name="Avatar-image-lg" args={{variant: "image",  imageURL:"https://picsum.photos/50/50/", size:"lg"}}>{Template.bind({})}</Story>
+</Canvas>

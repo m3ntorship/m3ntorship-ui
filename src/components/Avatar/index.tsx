@@ -7,16 +7,11 @@ import { IAvatarProps } from './IAvatar.d';
 
 const Avatar: FC<IAvatarProps> = ({
   variant = 'text',
-  imageURL = 'https://via.placeholder.com/100',
   text = 'ww',
   size = 'sm',
+  imageURL,
   className,
 }) => {
-  const imgPlaceholder = {
-    sm: 'https://via.placeholder.com/32',
-    md: 'https://via.placeholder.com/40',
-    lg: 'https://via.placeholder.com/48',
-  };
   const avatarClasses = classnames(
     styles.shared,
     styles[`size-${size}`],
@@ -24,15 +19,10 @@ const Avatar: FC<IAvatarProps> = ({
     styles[`variant-${variant}-${size}`],
     className
   );
-
   return variant === 'text' ? (
-    <span className={avatarClasses}>{text}</span>
+    <p className={avatarClasses}>{text}</p>
   ) : (
-    <img
-      className={avatarClasses}
-      src={imageURL || imgPlaceholder[`${size}`]}
-      alt="avatar"
-    />
+    <img className={avatarClasses} src={imageURL} alt="avatar" />
   );
 };
 
