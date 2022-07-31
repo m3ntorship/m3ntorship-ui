@@ -1,0 +1,40 @@
+.shared {
+  @apply rounded-full;
+}
+
+/* Avatar Size */
+
+.size-sm {
+  @apply w-xl h-xl;
+}
+.size-md {
+  @apply w-xxl h-xxl;
+}
+.size-lg {
+  /* {w|h}-xxxl is 56px not 48px */
+  width: 48px;
+  height: 48px;
+}
+
+/* text avatar*/
+.variant-text-shared {
+  @apply bg-neutral-lighter text-white font-inter uppercase text-center font-regular;
+}
+.variant-text-sm {
+  @apply leading-12 text-12;
+}
+.variant-text-md {
+  @apply leading-16 text-16;
+}
+.variant-text-lg {
+  @apply leading-16 text-16;
+}
+/** 
+  *  classes I can't find in current Figm tokens
+**/
+.rounded-full {
+  border-radius: 50%;
+}
+.text-16 {
+  font-size: 16px;
+}
