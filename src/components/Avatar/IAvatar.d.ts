@@ -1,7 +1,7 @@
 export interface IAvatarProps {
-  type?: 'imgAvatar' | 'nameAvatar';
-  imgURL?: string | undefined;
-  name?: string | undefined;
+  type?: 'letters' | 'image';
+  imageURL?: string | undefined;
+  letters?: string | undefined;
   size?: 'lg' | 'md' | 'sm';
   className?: string;
 }
