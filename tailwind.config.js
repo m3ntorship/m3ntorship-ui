@@ -94,7 +94,12 @@ module.exports = {
     fontFamily: themeFontFamily(),
     fontWeight: oneLayerWithNoPixel('fontWeight'),
     spacing: oneLayerWithPixelAdding('spacing'),
-    borderRadius: oneLayerWithPixelAdding('brd-radius'),
+    borderRadius: {
+      ...oneLayerWithPixelAdding('brd-radius'),
+      ...{
+        full: '50%',
+      },
+    },
     opacity: oneLayerWithNoPixel('opacity'),
     borderWidth: oneLayerWithPixelAdding('brd-width'),
     boxShadow: themeShadowBox(),
@@ -104,6 +109,10 @@ module.exports = {
       medium: '600px',
       large: '900px',
       xlarge: '1301px',
+    },
+    scale: {
+      '0': '0',
+      '100': '1',
     },
   },
   variants: {},
