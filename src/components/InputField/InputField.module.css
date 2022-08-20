@@ -1,0 +1,52 @@
+.label {
+  @apply mb-xs font-inter text-12 tracking-semi-wide leading-12 text-primary-text;
+}
+
+.input-field {
+  @apply w-full py-xs font-inter text-primary-text text-14 border-thin border-neutral-fade rounded-med leading-24 tracking-semi-wide;
+}
+
+.input-field::placeholder {
+  @apply text-secondary-text;
+}
+
+.input-field:focus,
+.error:focus {
+  @apply border-neutral-light outline-none border-thick;
+}
+
+.error {
+  @apply border-error border-thin;
+}
+
+.error-message {
+  @apply text-error text-12 font-regular font-inter tracking-semi-wide leading-16;
+}
+
+.disabled {
+  @apply opacity-5 pointer-events-none;
+}
+
+.icon {
+  @apply fill-secondary-text absolute top-1/2 -translate-y-1/2;
+}
+
+.prefix {
+  left: 18px;
+}
+
+.suffix {
+  right: 18px;
+}
+
+.textarea {
+  resize: none;
+}
+
+.prefix-padding {
+  @apply px-xxl;
+}
+
+.default-padding {
+  @apply px-med;
+}
