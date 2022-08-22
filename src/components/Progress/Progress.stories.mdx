@@ -1,0 +1,48 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Progress } from './index';
+
+<Meta title="Progress" component={Progress} />
+
+export const Template = args => <Progress {...args} />;
+
+# Progress
+
+Progress component informs users about status of on-going processes.
+
+<Canvas>
+  <Story name="Primary Progress" args={{value: 5, maxValue: 5}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Secondary Progress" args={{variant:"secondary", value: 5, maxValue: 5}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Value and maxValue
+
+Users can control of the progrss using `value` and `maxValue` props.
+
+<Canvas>
+  <Story name="Complete Progress" args={{value: 5, maxValue: 5}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Incomplete Progress" args={{value: 2, maxValue: 5}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Label
+
+Users can control label placement by passing `labelPlacement` prop, by default the label will be `value` / `maxValue` users can customize the label by passing `label` prop.
+
+<Canvas>
+  <Story name="Left Label Progress" args={{value: 5, maxValue: 5, labelPlacement: "left"}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Right Label Progress" args={{value: 2, maxValue: 5, labelPlacement: "right"}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Custom Label Progress" args={{value: 2, maxValue: 5, label: "Custom"}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
