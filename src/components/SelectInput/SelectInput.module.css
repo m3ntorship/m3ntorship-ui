@@ -1,0 +1,28 @@
+.label {
+  @apply font-inter text-12 tracking-semi-wide leading-12 text-primary-text;
+}
+
+.custom-select {
+  @apply mt-sm relative flex items-center;
+}
+
+.select {
+  @apply appearance-none px-med py-xs w-full bg-transparent font-inter text-primary-text text-14 border-thin border-neutral-fade rounded-med leading-24 tracking-semi-wide cursor-pointer focus:border-neutral-light focus:outline-none focus:border-thick;
+}
+
+.error {
+  @apply border-error border-thin focus:border-neutral-light focus:outline-none focus:border-thick;
+}
+
+.custom-select::after {
+  @apply content-[""] absolute right-med w-sm h-xs bg-neutral-light pointer-events-none;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.error-message {
+  @apply text-error text-12 font-regular font-inter tracking-semi-wide leading-16;
+}
+
+.disabled {
+  @apply opacity-5 pointer-events-none;
+}

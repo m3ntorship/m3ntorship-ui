@@ -1,5 +1,5 @@
 .label {
-  @apply mb-xs font-inter text-12 tracking-semi-wide leading-12 text-primary-text;
+  @apply mb-sm font-inter text-12 tracking-semi-wide leading-12 text-primary-text;
 }
 
 .input-field {

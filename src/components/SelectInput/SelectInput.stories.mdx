@@ -1,0 +1,60 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { SelectInput } from './index';
+
+
+<Meta title="SelectInput" component={SelectInput} />
+
+export const Template = args => <SelectInput {...args} />;
+
+# Select Input
+
+
+Select Input component allows users to select an option from a set of options.
+
+
+# Placeholder
+
+InputField component can have a palceholder.
+
+<Canvas>
+  <Story name="InputField with placeholder" args={{placeholder: "Placeholder", options: [{label: "One", value: 1}, {label: "Two", value: 2}]}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Labels
+
+InputField component can have a label associated with it.
+<Canvas>
+  <Story name="InputField with label" args={{label: "Label",placeholder: "Placeholder", options: [{label: "One", value: 1}, {label: "Two", value: 2}]}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Options
+
+Users can pass `options` prop with array of the options he wants to render.
+<Canvas>
+  <Story name="InputField options" args={{label: "Label",placeholder: "Placeholder", options: [{label: "One", value: 1}, {label: "Two", value: 2}]}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Error
+
+When passing `error` prop to the component it renders in error state, also it accepts an `errorMessage` prop.
+
+<Canvas>
+  <Story name="InputField with error" args={{label: "Label",placeholder: "Placeholder", options: [{label: "One", value: 1}, {label: "Two", value: 2}], error: true, errorMessage: "There is an error."}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Disabled
+When passing `disabled` prop it becomes inactive
+
+<Canvas>
+  <Story name="Disabled InputField" args={{label: "Label",placeholder: "Placeholder", options: [{label: "One", value: 1}, {label: "Two", value: 2}], disabled: true}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
