@@ -1,17 +1,27 @@
 module.exports = {
+  globals: {
+    React: true,
+    JSX: true,
+  },
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+  },
   plugins: [
     '@typescript-eslint',
     'simple-import-sort',
     'unused-imports',
     'import',
-    'tsc',
+    'prettier',
   ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
     'plugin:import/recommended',
     'plugin:import/typescript',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
   ],
   rules: {
     'no-console': 'warn',
@@ -31,6 +41,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'error',
+    '@typescript-eslint/interface-name-prefix': 'off',
     '@next/next/no-img-element': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
@@ -82,16 +93,5 @@ module.exports = {
       },
     ],
     //#endregion  //*======== Import Sort ===========
-
-    'tsc/config': [
-      1,
-      {
-        configFile: 'tsconfig.eslint.json',
-      },
-    ],
-  },
-  globals: {
-    React: true,
-    JSX: true,
   },
 };

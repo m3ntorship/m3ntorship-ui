@@ -1,0 +1,29 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Radio } from './index';
+
+<Meta title="Radio" component={Radio} />
+
+export const Template = args => <Radio {...args} />;
+
+# Radio
+
+Radio component allows users to select between multiple options.
+
+# Label
+
+Users can pass `label` prop to the component.
+
+<Canvas>
+  <Story name="label" args={{id: "radio", label: "Label"}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Disabled
+
+Users can pass `disabled` prop to make it inactive.
+<Canvas>
+  <Story name="disabled" args={{id: "radio-disabled", label: "Disabled", disabled: true}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

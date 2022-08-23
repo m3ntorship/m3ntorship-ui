@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary colors*/
+    --color-primary: 0, 171, 14;
+    --color-primary-contrast: 255, 255, 255;
+    --color-primary-hover: 0, 121, 10;
+
+    /* Secondary colors */
+    --color-secondary: 0, 147, 173;
+    --color-secondary-contrast: 255, 255, 255;
+    --color-secondary-hover: 0, 104, 123;
+
+    /* Text Colors */
+    --color-text: 26, 27, 26;
+
+    /* Background Colors */
+    --color-background: 250, 250, 250;
+    --color-background-surface: 255, 255, 255;
+
+    /* Neutral Colors */
+    --color-neutral: 62, 65, 63;
+
+    /* Error Colors */
+    --color-error: 224, 35, 51;
+    --color-error-contrast: 255, 255, 255;
+    --color-error-hover: 159, 25, 36;
+    --color-error-content: 94, 15, 21;
+
+    /* Info Colors */
+    --color-info: 0, 149, 214;
+    --color-info-contrast: 255, 255, 255;
+    --color-info-hover: 0, 106, 152;
+    --color-info-content: 0, 63, 90;
+
+    /* Warning Colors */
+    --color-warning: 237, 169, 0;
+    --color-warning-contrast: 255, 255, 255;
+    --color-warning-hover: 168, 120, 0;
+    --color-warning-content: 100, 71, 0;
+
+    /* Success Colors */
+    --color-success: 57, 188, 52;
+    --color-success-contrast: 255, 255, 255;
+    --color-success-hover: 40, 133, 37;
+    --color-success-content: 24, 79, 22;
+
+    /* Action Colors */
+    --color-action: 62, 65, 63;
+
+    /* Misc Colors */
+    --color-misc: 62, 65, 63;
+    --color-misc-rating: 241, 186, 51;
+  }
+}

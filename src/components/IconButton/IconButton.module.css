@@ -1,0 +1,17 @@
+.icon-btn {
+  @apply rounded-med flex justify-center items-center cursor-pointer disabled:pointer-events-none;
+}
+
+/* start icon button size */
+.size-lg {
+  @apply p-sm;
+}
+
+.size-md {
+  @apply p-xs;
+}
+
+.size-sm {
+  @apply p-xxs;
+}
+/* end icon button size */

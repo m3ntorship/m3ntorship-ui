@@ -1,0 +1,24 @@
+.radio {
+  @apply appearance-none border-thick border-neutral flex justify-center items-center cursor-pointer w-5 h-5 rounded-full;
+}
+
+.radio::before {
+  @apply scale-0 bg-neutral ease-in duration-150 content-[""] w-.156 h-.156 rounded-full;
+  content: '';
+}
+
+.radio:checked::before {
+  @apply scale-100;
+}
+
+.disabled-radio {
+  @apply pointer-events-none;
+}
+
+.label {
+  @apply font-inter font-regular leading-24 text-neutral ml-xs cursor-pointer;
+}
+
+.disabled-label {
+  @apply opacity-5 cursor-not-allowed;
+}

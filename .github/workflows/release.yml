@@ -1,15 +1,16 @@
-name: CI
-on: [push]
+name: Release
+on:
+  push:
+    branches:
+      - main
 jobs:
-  build:
-    name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
-
+  release:
+    name: Release
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         node: ['14.x']
         os: [ubuntu-latest]
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -18,18 +19,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-
       - name: Install deps and build (with cache)
         uses: bahmutov/npm-install@v1
 
-      - name: Lint
-        run: yarn lint
-
-      - name: check typecript errors
-        run: yarn typecheck
-
-      - name: Test
-        run: yarn test --ci --coverage --maxWorkers=2
-
       - name: Build
         run: yarn build
+        
+      - name: Release
+        run: yarn semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.M3NTORSHIP_NPM_TOKEN }}
+       

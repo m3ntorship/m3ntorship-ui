@@ -1,0 +1,35 @@
+.outer {
+  @apply h-xxxs w-full;
+}
+
+.inner {
+  @apply h-xxxs;
+}
+
+.outer-primary {
+  background-color: #b8e8bc;
+}
+
+.outer-secondary {
+  background-color: #b8e1e8;
+}
+
+.inner-primary {
+  @apply bg-primary;
+}
+
+.inner-secondary {
+  @apply bg-secondary;
+}
+
+.label {
+  @apply font-inter leading-20 tracking-very-wide;
+}
+
+.label-left {
+  @apply mr-med;
+}
+
+.label-right {
+  @apply ml-med;
+}
