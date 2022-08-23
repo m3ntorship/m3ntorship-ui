@@ -22,7 +22,7 @@
     "prepare": "husky install",
     "typecheck": "tsc --noEmit --incremental false",
     "build-tailwind": "npx tailwindcss -o ./dist/m3ntorship_ui.css --minify",
-    "semantic-release": "semantic-release --branches dev",
+    "semantic-release": "semantic-release --branches main",
     "chromatic": "chromatic"
   },
   "peerDependencies": {
