@@ -1,17 +1,17 @@
 .checkbox {
-  @apply appearance-none relative border-thick border-neutral rounded-sm cursor-pointer flex justify-center items-center ease-in duration-150;
+  @apply appearance-none focus:ring-0 focus:outline-none relative border-thick border-neutral rounded-sm cursor-pointer flex justify-center items-center ease-in duration-150;
   width: 18px;
   height: 18px;
 }
 
 .checkbox-primary:checked,
 .checkbox-primary-indeterminate {
-  @apply bg-success border-success ease-in duration-150;
+  @apply bg-success focus:bg-success focus:outline-none hover:bg-success border-success ease-in duration-150;
 }
 
 .checkbox-secondary:checked,
 .checkbox-secondary-indeterminate {
-  @apply bg-secondary border-secondary ease-in duration-150;
+  @apply bg-secondary focus:bg-secondary focus:outline-none hover:bg-secondary border-secondary ease-in duration-150;
 }
 
 .checkbox::before {

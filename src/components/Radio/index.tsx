@@ -15,7 +15,7 @@ const Radio: FC<IRadioProps> = ({ id, label, disabled, ...props }) => {
   });
 
   return (
-    <div className="inline-flex items-center">
+    <div className="flex items-center">
       <input
         type="radio"
         id={id}
