@@ -1,5 +1,11 @@
 .radio {
-  @apply appearance-none border-thick border-neutral flex justify-center items-center cursor-pointer w-5 h-5 rounded-full;
+  @apply focus:ring-0 appearance-none border-thick border-neutral flex justify-center items-center cursor-pointer w-5 h-5 rounded-full;
+}
+
+.radio:checked,
+.radio:checked:hover,
+.radio:checked:focus {
+  @apply bg-white border-thick border-neutral outline-none;
 }
 
 .radio::before {
