@@ -28,7 +28,7 @@ const Checkbox: FC<ICheckboxProps> = ({
     [styles['checkbox-disabled']]: disabled,
   });
   return (
-    <div className="inline-flex items-center">
+    <div className="flex items-center">
       <input
         type="checkbox"
         id={id}
