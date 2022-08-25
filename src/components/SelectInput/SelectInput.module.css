@@ -7,7 +7,13 @@
 }
 
 .select {
-  @apply appearance-none px-med py-xs w-full bg-transparent font-inter text-primary-text text-14 border-thin border-neutral-fade rounded-med leading-24 tracking-semi-wide cursor-pointer focus:border-neutral-light focus:outline-none focus:border-thick;
+  @apply appearance-none bg-none focus:ring-0 border-none px-med py-xs w-full bg-transparent font-inter text-primary-text text-14 rounded-med leading-24 tracking-semi-wide cursor-pointer focus:outline-none;
+  box-shadow: 0 0 0 1px rgba(62, 65, 63, 0.1);
+}
+
+.select:focus {
+  @apply outline-none ring-0;
+  box-shadow: 0 0 0 2px rgba(62, 65, 63, 0.6);
 }
 
 .error {
