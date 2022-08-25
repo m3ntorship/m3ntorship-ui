@@ -3,7 +3,8 @@
 }
 
 .input-field {
-  @apply w-full py-xs font-inter text-primary-text text-14 border-thin border-neutral-fade rounded-med leading-24 tracking-semi-wide;
+  @apply w-full py-xs font-inter text-primary-text text-14 rounded-med leading-24 tracking-semi-wide;
+  box-shadow: 0 0 0 1px rgba(62, 65, 63, 0.1);
 }
 
 .input-field::placeholder {
@@ -12,7 +13,8 @@
 
 .input-field:focus,
 .error:focus {
-  @apply border-neutral-light outline-none border-thick;
+  @apply outline-none;
+  box-shadow: 0 0 0 2px rgba(62, 65, 63, 0.6);
 }
 
 .error {
@@ -40,7 +42,13 @@
 }
 
 .textarea {
-  resize: none;
+  @apply border-none resize-none;
+  box-shadow: 0 0 0 1px rgba(62, 65, 63, 0.1);
+}
+
+.textarea:focus {
+  @apply ring-0;
+  box-shadow: 0 0 0 2px rgba(62, 65, 63, 0.6);
 }
 
 .prefix-padding {
