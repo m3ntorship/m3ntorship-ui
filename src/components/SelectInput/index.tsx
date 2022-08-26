@@ -13,6 +13,7 @@ const SelectInput: FC<ISelectInputProps> = ({
   disabled = false,
   error = false,
   errorMessage = '',
+  ...props
 }) => {
   const selectInputClasses = classNames(styles['select'], {
     [styles['error']]: error,
@@ -34,7 +35,7 @@ const SelectInput: FC<ISelectInputProps> = ({
         </label>
       )}
       <div className={customSelectClasses}>
-        <select id={id} className={selectInputClasses}>
+        <select id={id} className={selectInputClasses} {...props}>
           <option value="" disabled selected hidden>
             {placeholder}
           </option>
