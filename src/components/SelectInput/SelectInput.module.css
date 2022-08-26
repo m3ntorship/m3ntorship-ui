@@ -11,13 +11,14 @@
   box-shadow: 0 0 0 1px rgba(62, 65, 63, 0.1);
 }
 
-.select:focus {
+.select:focus,
+.error:focus {
   @apply outline-none ring-0;
   box-shadow: 0 0 0 2px rgba(62, 65, 63, 0.6);
 }
 
 .error {
-  @apply border-error border-thin focus:border-neutral-light focus:outline-none focus:border-thick;
+  box-shadow: 0 0 0 1px rgba(224, 35, 51);
 }
 
 .custom-select::after {
