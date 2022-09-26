@@ -22,7 +22,7 @@
     "prepare": "husky install",
     "typecheck": "tsc --noEmit --incremental false",
     "build-tailwind": "npx tailwindcss -o ./dist/m3ntorship_ui.css --minify",
-    "semantic-release": "semantic-release --branches dev",
+    "semantic-release": "semantic-release --branches main",
     "chromatic": "chromatic"
   },
   "peerDependencies": {
@@ -46,6 +46,10 @@
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/react": "^6.5.9",
     "@svgr/webpack": "^6.2.1",
+    "@testing-library/dom": "^8.17.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
     "@types/react-test-renderer": "^18.0.0",

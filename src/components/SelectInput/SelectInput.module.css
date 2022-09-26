@@ -1,0 +1,35 @@
+.label {
+  @apply font-inter text-12 tracking-semi-wide leading-12 text-primary-text;
+}
+
+.custom-select {
+  @apply mt-sm relative flex items-center;
+}
+
+.select {
+  @apply appearance-none bg-none focus:ring-0 border-none px-med py-xs w-full bg-transparent font-inter text-primary-text text-14 rounded-med leading-24 tracking-semi-wide cursor-pointer focus:outline-none;
+  box-shadow: 0 0 0 1px rgba(62, 65, 63, 0.1);
+}
+
+.select:focus,
+.error:focus {
+  @apply outline-none ring-0;
+  box-shadow: 0 0 0 2px rgba(62, 65, 63, 0.6);
+}
+
+.error {
+  box-shadow: 0 0 0 1px rgba(224, 35, 51);
+}
+
+.custom-select::after {
+  @apply content-[""] absolute right-med w-sm h-xs bg-neutral-light pointer-events-none;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.error-message {
+  @apply text-error text-12 font-regular font-inter tracking-semi-wide leading-16;
+}
+
+.disabled {
+  @apply opacity-5 pointer-events-none;
+}
