@@ -4,17 +4,24 @@ import React, { FC } from 'react';
 import styles from './Badge.module.css';
 
 import { IBadgeProps } from './IBadge.d';
+
 const Badge: FC<IBadgeProps> = ({
-  children = 'Badge',
+  children = '',
   color = 'primary',
   className,
 }) => {
   const BadgeClasses = classNames(
-    styles.shared,
-    styles[`variant-${color}`],
+    `${styles['shared']} ${styles[`variant-${color}`]}`,
+    {
+      [styles['empty-state']]: !children,
+      [styles['filled-state']]: Boolean(children),
+    },
     className
   );
-  return <b className={BadgeClasses}>{children}</b>;
+  const capitalizedFirstLetter = children?.charAt(0).toUpperCase();
+  const label = `${capitalizedFirstLetter}${children?.slice(1)}`;
+
+  return <label className={BadgeClasses}>{label}</label>;
 };
 
 export { Badge };
