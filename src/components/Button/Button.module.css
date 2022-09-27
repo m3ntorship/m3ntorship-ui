@@ -1,6 +1,6 @@
 /* the shared styles arround all buttons */
 .shared {
-  @apply rounded-med font-inter;
+  @apply rounded-med font-inter relative;
 }
 
 /* button sizes */
@@ -80,4 +80,17 @@
 
 .button-s {
   @apply font-medium leading-20 text-14 tracking-wide;
+}
+
+/* Loading spinner styles */
+.loading-wrapper {
+  @apply absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 inline-block;
+}
+
+.loading {
+  @apply border-thick border-transparent animate-spin rounded-full border-t-dgrey-100 w-lrg h-lrg;
+}
+
+.transparent {
+  @apply text-transparent;
 }

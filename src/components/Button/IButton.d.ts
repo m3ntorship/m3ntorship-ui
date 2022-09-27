@@ -13,6 +13,8 @@ export interface IButtonProps {
   disabled?: true | false;
   /**do some action when icon button is clicked */
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  /**set loading to true to show animated spinner instead of the text */
+  loading?: boolean;
   /**the type of the button element */
   type?: 'button' | 'submit' | 'reset' | undefined;
   /**add additional classes for button element */

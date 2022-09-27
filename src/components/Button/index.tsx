@@ -13,6 +13,7 @@ const Button: FC<IButtonProps> = ({
   size = 'md',
   disabled = false,
   onClick = (): null => null,
+  loading,
   type = 'button',
   className,
 }) => {
@@ -21,6 +22,7 @@ const Button: FC<IButtonProps> = ({
     styles[`variant-${variant}-shared`],
     styles[`size-${size}`],
     styles[`variant-${variant}-${color}`],
+    { [styles['transparent']]: loading },
     className
   );
 
@@ -31,6 +33,11 @@ const Button: FC<IButtonProps> = ({
       type={type}
       className={buttonClasses}
     >
+      {loading && (
+        <div className={styles['loading-wrapper']}>
+          <div className={styles['loading']} />
+        </div>
+      )}
       {children}
     </button>
   );
