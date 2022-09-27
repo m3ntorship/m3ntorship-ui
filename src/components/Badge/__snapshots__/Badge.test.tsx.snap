@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge component should render Badge component with capitalized first letter 1`] = `
+<label
+  className="shared variant-primary filled-state"
+>
+  Simple badge
+</label>
+`;
+
+exports[`Badge component should render Badge component with text and Secondary background color when we pass children and color props 1`] = `
+<label
+  className="shared variant-secondary filled-state"
+>
+  Simple badge
+</label>
+`;
+
+exports[`Badge component should render Badge component with text when we pass children 1`] = `
+<label
+  className="shared variant-primary filled-state"
+>
+  Simple badge
+</label>
+`;
+
+exports[`Badge component should render empty badge label with primary background color when we don't pass any props 1`] = `
+<label
+  className="shared variant-primary empty-state"
+/>
+`;
