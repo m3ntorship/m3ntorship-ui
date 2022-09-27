@@ -9,12 +9,10 @@ export const Template = args => <Badge {...args} />;
 
 Badge shows the text inside rounded element with colored background
 
-
-## Colors
-
+## Badge with content isnide
 
 <Canvas>
-  <Story name="Default" args={{ color: 'primary', children: 'primary' }}>
+  <Story name="primary" args={{ color: 'primary', children: 'primary' }}>
     {Template.bind({})}
   </Story>
   <Story name="Secondary" args={{ color: 'secondary', children: 'secondary' }}>
@@ -30,6 +28,29 @@ Badge shows the text inside rounded element with colored background
     {Template.bind({})}
   </Story>
   <Story name="Success" args={{ color: 'success', children: 'Success' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Badge with empty content
+
+<Canvas>
+  <Story name="emptyPrimary" args={{ color: 'primary' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="emptySecondary" args={{ color: 'secondary' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="emptyWarning" args={{ color: 'warning' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="emptyInfo" args={{ color: 'info' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="emptyError" args={{ color: 'error' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="emptySuccess" args={{ color: 'success' }}>
     {Template.bind({})}
   </Story>
 </Canvas>
