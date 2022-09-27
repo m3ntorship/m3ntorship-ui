@@ -7,7 +7,7 @@
 }
 
 .filled-state {
-  @apply rounded-med py-xxxs px-xs;
+  @apply rounded-med py-xxxs px-xs w-fit;
 }
 
 .variant-primary {
