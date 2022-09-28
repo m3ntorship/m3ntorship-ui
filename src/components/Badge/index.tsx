@@ -21,7 +21,11 @@ const Badge: FC<IBadgeProps> = ({
   const capitalizedFirstLetter = children?.charAt(0).toUpperCase();
   const label = `${capitalizedFirstLetter}${children?.slice(1)}`;
 
-  return <label className={BadgeClasses}>{label}</label>;
+  return (
+    <span data-testid="badge" className={BadgeClasses}>
+      {label}
+    </span>
+  );
 };
 
 export { Badge };
