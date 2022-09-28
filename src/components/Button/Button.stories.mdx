@@ -39,6 +39,14 @@ Users can change color of the button, by passing `color` prop.
   <Story name="Neutral" args={{color: "neutral", children: "Neutral"}}>{Template.bind({})}</Story>
 </Canvas>
 
+## Loading
+
+set `loading` to true to show animated spinner instead of the text
+
+<Canvas>
+  <Story name="Loaing" args={{children: "button", loading: true}}>{Template.bind({})}</Story>
+</Canvas>
+
 ## Disabled
 
 Users can disable button, by passing `disabled` prop.

@@ -3,7 +3,7 @@
 exports[`Button should render button component with {Default inner text, and className = {shared variant-filled-shared size-large variant-filled-primary}} 1`] = `
 <button
   className="shared variant-filled-shared size-md variant-filled-primary"
-  disabled={false}
+  data-testid="button"
   onClick={[Function]}
   type="button"
 >
@@ -11,10 +11,29 @@ exports[`Button should render button component with {Default inner text, and cla
 </button>
 `;
 
+exports[`Button should render disabled Button with loading spinner and invisible text when we set loading to true 1`] = `
+<button
+  className="shared variant-filled-shared size-md variant-filled-primary btn-loading"
+  data-testid="button"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  <div
+    className="loading-wrapper"
+  >
+    <div
+      className="loading"
+    />
+  </div>
+  button text
+</button>
+`;
+
 exports[`Button should return Button with stront tag child 1`] = `
 <button
   className="shared variant-ghost-shared size-md variant-ghost-primary"
-  disabled={true}
+  data-testid="button"
   onClick={[Function]}
   type="button"
 >
@@ -27,6 +46,7 @@ exports[`Button should return Button with stront tag child 1`] = `
 exports[`Button should return ghost disabled button 1`] = `
 <button
   className="shared variant-ghost-shared size-md variant-ghost-primary"
+  data-testid="button"
   disabled={true}
   onClick={[Function]}
   type="button"
