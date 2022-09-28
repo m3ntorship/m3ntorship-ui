@@ -96,9 +96,7 @@ module.exports = {
     spacing: oneLayerWithPixelAdding('spacing'),
     borderRadius: {
       ...oneLayerWithPixelAdding('brd-radius'),
-      ...{
-        full: '50%',
-      },
+      full: '50%',
     },
     opacity: oneLayerWithNoPixel('opacity'),
     borderWidth: oneLayerWithPixelAdding('brd-width'),
