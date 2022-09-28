@@ -22,7 +22,7 @@ const Button: FC<IButtonProps> = ({
     styles[`variant-${variant}-shared`],
     styles[`size-${size}`],
     styles[`variant-${variant}-${color}`],
-    { [styles['transparent']]: loading },
+    { [styles['btn-loading']]: loading },
     className
   );
 

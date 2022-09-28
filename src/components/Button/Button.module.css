@@ -91,6 +91,6 @@
   @apply border-thick border-transparent animate-spin rounded-full border-t-dgrey-100 w-lrg h-lrg;
 }
 
-.transparent {
-  @apply text-transparent;
+.btn-loading {
+  @apply text-transparent cursor-wait;
 }
