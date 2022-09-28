@@ -1,7 +1,7 @@
 export interface IAvatarProps {
-  variant?: 'text' | 'image';
-  imageURL?: string | undefined;
-  text?: string | undefined;
+  src?: string | undefined;
+  alt?: string | undefined;
   size?: 'lg' | 'md' | 'sm';
   className?: string;
+  children?: ReactNode | string;
 }

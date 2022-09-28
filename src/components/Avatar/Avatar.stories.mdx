@@ -15,24 +15,31 @@ You can use the avatar as image or as text.
 
 ###  Text Avatar
 
-fot the text avatar, You should pass the first character of first name/last name. it's recomended to just pass 1 or 2 characters
+Can be created by passing string as a `children`. It's recommended to limit the string length to 4 characters at most.
 
 You can use it in 3 sizes : sm | md | lg
 
 <Canvas>
-  <Story name="Avatar-text-sm" args={{variant: "text", text: "ab", size:"sm"}}>{Template.bind({})}</Story>
-  <Story name="Avatar-text-md" args={{variant: "text", text: "ab", size:"md"}}>{Template.bind({})}</Story>
-  <Story name="Avatar-text-lg" args={{variant: "text", text: "ab", size:"lg"}}>{Template.bind({})}</Story>   
+  <Story name="Avatar-text-sm" args={{ children: "a", size:"sm"}}>{Template.bind({})}</Story>
+  <Story name="Avatar-text-md" args={{children: "a", size:"md"}}>{Template.bind({})}</Story>
+  <Story name="Avatar-text-lg" args={{children: "a", size:"lg"}}>{Template.bind({})}</Story>   
 </Canvas>
 
 ###  Image Avatar
 
-Image avatar is a nice-circled image.
+Image avatar can be created by passing `src` attribute.
 
 You can use it in 3 sizes : sm | md | lg
 
 <Canvas>
-  <Story name="Avatar-image-sm" args={{variant: "image",  imageURL:"https://picsum.photos/50/50/", size:"sm"}}>{Template.bind({})}</Story>
-  <Story name="Avatar-image-md" args={{variant: "image",  imageURL:"https://picsum.photos/50/50/", size:"md"}}>{Template.bind({})}</Story>
-  <Story name="Avatar-image-lg" args={{variant: "image",  imageURL:"https://picsum.photos/50/50/", size:"lg"}}>{Template.bind({})}</Story>
+  <Story name="Avatar-image-sm" args={{src:"https://picsum.photos/50/50/", size:"sm"}}>{Template.bind({})}</Story>
+  <Story name="Avatar-image-md" args={{src:"https://picsum.photos/50/50/", size:"md"}}>{Template.bind({})}</Story>
+  <Story name="Avatar-image-lg" args={{src:"https://picsum.photos/50/50/", size:"lg"}}>{Template.bind({})}</Story>
 </Canvas>
+
+## Fallbacks
+
+If there is an error loading the image, component falls back to the following:
+- Children
+- First character of alt attribute
+- a hardcoded character `A`

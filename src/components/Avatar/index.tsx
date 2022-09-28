@@ -1,28 +1,43 @@
 import classnames from 'classnames';
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import styles from './Avatar.module.css';
 
 import { IAvatarProps } from './IAvatar.d';
 
 const Avatar: FC<IAvatarProps> = ({
-  variant = 'text',
-  text = 'ww',
+  alt,
+  src,
   size = 'sm',
-  imageURL,
   className,
+  children,
 }) => {
-  const avatarClasses = classnames(
+  const [error, setError] = useState<boolean>(false);
+  const textClasses = classnames(
     styles.shared,
     styles[`size-${size}`],
-    styles[`variant-${variant}-shared`],
-    styles[`variant-${variant}-${size}`],
+    styles['variant-text-shared'],
+    styles[`variant-text-${size}`],
     className
   );
-  return variant === 'text' ? (
-    <p className={avatarClasses}>{text}</p>
+
+  const imageClasses = classnames(
+    styles.shared,
+    styles[`size-${size}`],
+    className
+  );
+
+  return error || !src ? (
+    <p className={textClasses}>
+      {children ? children : alt ? alt.charAt(0) : 'A'}
+    </p>
   ) : (
-    <img className={avatarClasses} src={imageURL} alt="avatar" />
+    <img
+      src={src}
+      onError={(): void => setError(true)}
+      alt={alt}
+      className={imageClasses}
+    />
   );
 };
 

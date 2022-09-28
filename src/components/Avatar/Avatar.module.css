@@ -7,13 +7,13 @@
 .size-sm {
   @apply w-xl h-xl;
 }
+
 .size-md {
   @apply w-xxl h-xxl;
 }
+
 .size-lg {
-  /* {w|h}-xxxl is 56px not 48px */
-  width: 48px;
-  height: 48px;
+  @apply w-[48px] h-[48px];
 }
 
 /* text avatar*/
@@ -24,17 +24,8 @@
   @apply leading-32 text-12;
 }
 .variant-text-md {
-  @apply leading-40 text-16;
+  @apply leading-40;
 }
 .variant-text-lg {
-  @apply leading-48 text-16;
-}
-/** 
-  *  classes I can't find in current Figm tokens
-**/
-.rounded-full {
-  border-radius: 50%;
-}
-.text-16 {
-  font-size: 16px;
+  @apply leading-48;
 }

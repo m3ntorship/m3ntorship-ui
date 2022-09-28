@@ -94,7 +94,10 @@ module.exports = {
     fontFamily: themeFontFamily(),
     fontWeight: oneLayerWithNoPixel('fontWeight'),
     spacing: oneLayerWithPixelAdding('spacing'),
-    borderRadius: oneLayerWithPixelAdding('brd-radius'),
+    borderRadius: {
+      ...oneLayerWithPixelAdding('brd-radius'),
+      full: '50%',
+    },
     opacity: oneLayerWithNoPixel('opacity'),
     borderWidth: oneLayerWithPixelAdding('brd-width'),
     boxShadow: themeShadowBox(),
