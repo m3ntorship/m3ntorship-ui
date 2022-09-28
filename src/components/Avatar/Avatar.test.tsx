@@ -1,6 +1,5 @@
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import '@testing-library/jest-dom';
 
 import { Avatar } from './';
 
@@ -11,7 +10,7 @@ describe('Avatar component', () => {
     expect(avatarText).toBeInTheDocument();
   });
 
-  it('renders an img when given valid src', () => {
+  it('renders an img when given a valid src', () => {
     const { getByRole } = render(
       <Avatar src="https://picsum.photos/50/50/" alt="avatar image" />
     );
@@ -19,7 +18,7 @@ describe('Avatar component', () => {
     expect(avatarImage).toBeInTheDocument();
   });
 
-  it('renders chidlren when given nonvalid src', () => {
+  it('renders chidlren when given an invalid src', () => {
     const { getByText, getByRole } = render(
       <Avatar src="https://picsum.photoss/50/50/" alt="avatar image">
         B
@@ -35,7 +34,7 @@ describe('Avatar component', () => {
     expect(avatarText).toBeInTheDocument();
   });
 
-  it('renders a p with first letter of alt when given nonvalid src and no children', () => {
+  it('renders a p with first letter of alt when given invalid src and no children', () => {
     const { getByText, getByRole } = render(
       <Avatar src="https://picsum.photoss/50/50/" alt="avatar image" />
     );
@@ -50,7 +49,7 @@ describe('Avatar component', () => {
     expect(avatarText).toBeInTheDocument();
   });
 
-  it('renders a p with A when given nonvalid src and no children or alt', () => {
+  it('renders a p with A when given invalid src and no children or alt', () => {
     const { getByText, getByRole } = render(
       <Avatar src="https://picsum.photoss/50/50/" />
     );

@@ -27,10 +27,8 @@ const Avatar: FC<IAvatarProps> = ({
     className
   );
 
-  return children || !src || error ? (
-    <p className={textClasses}>
-      {children ? children : alt ? alt.charAt(0) : 'A'}
-    </p>
+  return !src || error ? (
+    <p className={textClasses}>{children || alt?.charAt(0) || 'A'}</p>
   ) : (
     <img
       src={src}

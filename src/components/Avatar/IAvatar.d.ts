@@ -1,6 +1,8 @@
+import { ReactNode } from 'react';
+
 export interface IAvatarProps {
-  src?: string | undefined;
-  alt?: string | undefined;
+  src?: string;
+  alt?: string;
   size?: 'lg' | 'md' | 'sm';
   className?: string;
   children?: ReactNode | string;
