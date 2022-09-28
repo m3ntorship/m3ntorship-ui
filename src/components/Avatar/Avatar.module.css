@@ -1,0 +1,31 @@
+.shared {
+  @apply rounded-full inline-block;
+}
+
+/* Avatar Size */
+
+.size-sm {
+  @apply w-xl h-xl;
+}
+
+.size-md {
+  @apply w-xxl h-xxl;
+}
+
+.size-lg {
+  @apply w-[48px] h-[48px];
+}
+
+/* text avatar*/
+.variant-text-shared {
+  @apply flex-col align-middle bg-neutral-lighter text-white font-inter uppercase text-center font-regular;
+}
+.variant-text-sm {
+  @apply leading-32 text-12;
+}
+.variant-text-md {
+  @apply leading-40;
+}
+.variant-text-lg {
+  @apply leading-48;
+}

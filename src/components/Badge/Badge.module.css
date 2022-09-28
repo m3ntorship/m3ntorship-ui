@@ -1,0 +1,35 @@
+.shared {
+  @apply flex font-inter font-regular text-12 leading-12 text-white;
+}
+
+.empty-state {
+  @apply w-xs h-xs rounded-full;
+}
+
+.filled-state {
+  @apply rounded-med py-xxxs px-xs w-fit;
+}
+
+.variant-primary {
+  @apply bg-primary;
+}
+
+.variant-secondary {
+  @apply bg-secondary;
+}
+
+.variant-warning {
+  @apply bg-warning;
+}
+
+.variant-info {
+  @apply bg-info;
+}
+
+.variant-error {
+  @apply bg-error;
+}
+
+.variant-success {
+  @apply bg-success;
+}
