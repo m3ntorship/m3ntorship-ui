@@ -92,5 +92,5 @@
 }
 
 .btn-loading {
-  @apply text-transparent cursor-wait;
+  @apply disabled:text-transparent disabled:hover:text-transparent cursor-not-allowed;
 }

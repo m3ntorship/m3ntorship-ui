@@ -29,7 +29,7 @@ const Button: FC<IButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      disabled={disabled}
+      disabled={disabled || loading}
       type={type}
       className={buttonClasses}
     >
