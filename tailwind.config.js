@@ -108,6 +108,10 @@ module.exports = {
       large: '900px',
       xlarge: '1301px',
     },
+    scale: {
+      '0': '0',
+      '100': '1',
+    },
   },
   variants: {},
   plugins: [],

@@ -1,0 +1,55 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Checkbox } from './index';
+
+<Meta title="Checkbox" component={Checkbox} />
+
+export const Template = args => <Checkbox {...args} />;
+
+# Checkbox
+
+Checkbox component allows users to select multiple options from a set of options.
+
+# Variants
+
+Checkbox component comes in two variants: `primary` and `secondary`.
+
+<Canvas>
+  <Story name="Primary Checkbox " args={{id: "primary", label: "Primary"}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Secondary Checkbox " args={{id: "secondary", label: "Secondary", variant: "secondary"}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+
+
+# Label
+
+Users can pass `label` prop to the component.
+
+<Canvas>
+  <Story name="Checkbox with label" args={{id: "label", label: "Label"}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Indeterminate
+
+Users can pass `indeterminate` prop to render a checkbox in undetermined state.
+
+<Canvas>
+  <Story name="Indeterminate Checkbox" args={{id: "indeterminate", label: "Indeterminate", indeterminate: true}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Disabled
+
+Users can pass `disabled` prop to render an inactive checkbox.
+
+<Canvas>
+  <Story name="Disabled Checkbox" args={{id: "disabled", label: "Disabled", disabled: true}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

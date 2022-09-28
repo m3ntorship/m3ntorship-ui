@@ -1,0 +1,73 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { InputField } from './index';
+
+import Star from '../../assets/icons/star.svg';
+
+<Meta title="InputField" component={InputField} />
+
+export const Template = args => <InputField {...args} />;
+
+# Input Field
+
+
+Input Field component allows users to enter and edit text.
+
+# Multiline
+
+Users can pass `multiline` prop to render a textarea
+
+<Canvas>
+  <Story name="textarea" args={{placeholder: "Placeholder",  label: "Label", id: "textarea", multiline: true}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Labels
+
+InputField component can have a label associated with it.
+<Canvas>
+  <Story name="With Label" args={{placeholder: "Placeholder",  label: "Label", id: "with-label"}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Icons
+InputField component can have a prefix icon, a suffic icon or both.
+
+<Canvas>
+  <Story name="Prefix Icon" args={{placeholder: "Placeholder", label: "Prefix Icon", id: "prefix-icon", icon: <Star />, prefix: true}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Suffix Icon" args={{placeholder: "Placeholder", label: "Suffix Icon", id: "suffix-icon", icon: <Star />, suffix: true}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Both Icons" args={{placeholder: "Placeholder", label: "Both Icons", id: "both-icons", icon: <Star />, prefix: true, suffix: true}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Error
+When passing `error` prop to the component it renders in error state, also it accepts an `errorMessage` prop.
+
+<Canvas>
+  <Story name="Error" args={{placeholder: "Placeholder",  label: "Error", id: "error", error: true, errorMessage: "There is an error!"}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Form Attributes
+
+Standard form attributes are supported.
+
+<Canvas>
+  <Story name="Required" args={{placeholder: "Placeholder",  label: "Required", id: "required", required: true}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Disabled" args={{placeholder: "Placeholder",  label: "Disabled", id: "disabled", disabled: true}}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Password" args={{placeholder: "Placeholder",  label: "Password", id: "password", type: "password"}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
