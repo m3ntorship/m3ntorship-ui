@@ -31,6 +31,7 @@ const Button: FC<IButtonProps> = ({
       onClick={onClick}
       disabled={disabled || loading}
       type={type}
+      data-testid="button"
       className={buttonClasses}
     >
       {loading && (
