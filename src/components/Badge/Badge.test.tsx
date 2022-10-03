@@ -13,7 +13,7 @@ describe('Badge component', () => {
   });
 
   it('should render Badge component with text when we pass children', () => {
-    render(<Badge>Simple badge</Badge>);
+    render(<Badge text="Simple badge" />);
 
     const badgeEl = screen.getByTestId('badge');
 
@@ -21,7 +21,7 @@ describe('Badge component', () => {
   });
 
   it('should render Badge component with text and Secondary background color when we pass children and color props', () => {
-    render(<Badge color="secondary">Simple badge</Badge>);
+    render(<Badge text="Simple badge" color="secondary" />);
 
     const badgeEl = screen.getByTestId('badge');
 
@@ -29,7 +29,7 @@ describe('Badge component', () => {
   });
 
   it('should render Badge component with capitalized first letter', () => {
-    render(<Badge>simple badge</Badge>);
+    render(<Badge text="simple badge" />);
 
     const badgeEl = screen.getByTestId('badge');
 
