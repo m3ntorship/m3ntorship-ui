@@ -17,24 +17,26 @@ You can use the avatar as image or as text.
 
 Can be created by passing string as a `children`. It's recommended to limit the string length to 4 characters at most.
 
-You can use it in 3 sizes : sm | md | lg
+You can use it in 4 sizes : sm | md | lg | xlg
 
 <Canvas>
   <Story name="Avatar-text-sm" args={{ children: "a", size:"sm"}}>{Template.bind({})}</Story>
   <Story name="Avatar-text-md" args={{children: "a", size:"md"}}>{Template.bind({})}</Story>
-  <Story name="Avatar-text-lg" args={{children: "a", size:"lg"}}>{Template.bind({})}</Story>   
+  <Story name="Avatar-text-lg" args={{children: "a", size:"lg"}}>{Template.bind({})}</Story> 
+  <Story name="Avatar-text-xlg" args={{children: "a", size:"xlg"}}>{Template.bind({})}</Story>   
 </Canvas>
 
 ###  Image Avatar
 
 Image avatar can be created by passing `src` attribute.
 
-You can use it in 3 sizes : sm | md | lg
+You can use it in 4 sizes : sm | md | lg |xlg
 
 <Canvas>
   <Story name="Avatar-image-sm" args={{src:"https://picsum.photos/50/50/", size:"sm"}}>{Template.bind({})}</Story>
   <Story name="Avatar-image-md" args={{src:"https://picsum.photos/50/50/", size:"md"}}>{Template.bind({})}</Story>
   <Story name="Avatar-image-lg" args={{src:"https://picsum.photos/50/50/", size:"lg"}}>{Template.bind({})}</Story>
+  <Story name="Avatar-image-xlg" args={{src:"https://picsum.photos/50/50/", size:"xlg"}}>{Template.bind({})}</Story>
 </Canvas>
 
 ## Fallbacks

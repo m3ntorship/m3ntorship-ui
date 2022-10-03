@@ -15,6 +15,9 @@
 .size-lg {
   @apply w-[48px] h-[48px];
 }
+.size-xlg {
+  @apply w-[72px] h-[72px];
+}
 
 /* text avatar*/
 .variant-text-shared {
@@ -28,4 +31,7 @@
 }
 .variant-text-lg {
   @apply leading-48;
+}
+.variant-text-xlg {
+  @apply leading-72;
 }

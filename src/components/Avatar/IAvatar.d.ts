@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 export interface IAvatarProps {
   src?: string;
   alt?: string;
-  size?: 'lg' | 'md' | 'sm';
+  size?: 'xlg' | 'lg' | 'md' | 'sm';
   className?: string;
   children?: ReactNode | string;
 }
