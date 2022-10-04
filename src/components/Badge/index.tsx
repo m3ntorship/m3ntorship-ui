@@ -6,20 +6,20 @@ import styles from './Badge.module.css';
 import { IBadgeProps } from './IBadge.d';
 
 const Badge: FC<IBadgeProps> = ({
-  children = '',
+  text = '',
   color = 'primary',
   className,
 }) => {
   const BadgeClasses = classNames(
     `${styles['shared']} ${styles[`variant-${color}`]}`,
     {
-      [styles['empty-state']]: !children,
-      [styles['filled-state']]: Boolean(children),
+      [styles['empty-state']]: !text,
+      [styles['filled-state']]: Boolean(text),
     },
     className
   );
-  const capitalizedFirstLetter = children?.charAt(0).toUpperCase();
-  const label = `${capitalizedFirstLetter}${children?.slice(1)}`;
+  const capitalizedFirstLetter = text?.charAt(0).toUpperCase();
+  const label = `${capitalizedFirstLetter}${text?.slice(1)}`;
 
   return (
     <span data-testid="badge" className={BadgeClasses}>
