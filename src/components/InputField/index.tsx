@@ -5,6 +5,7 @@ import styles from './InputField.module.css';
 
 import { IInputFieldProps } from './IInputField.d';
 import { BaseIcon } from '../IconButton/BaseIcon';
+import { Typography } from '../Typography';
 
 const InputField: FC<IInputFieldProps> = ({
   label,
@@ -40,7 +41,7 @@ const InputField: FC<IInputFieldProps> = ({
   });
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col relative">
       {label ? (
         <label htmlFor={id} className={labelClasses}>
           {label}
@@ -74,9 +75,11 @@ const InputField: FC<IInputFieldProps> = ({
           <input id={id} className={inputClasses} {...inputProps} />
         )}
       </div>
-      {errorMessage ? (
-        <span className={styles['error-message']}>{errorMessage}</span>
-      ) : null}
+      {errorMessage && (
+        <Typography variant="body1" className={styles['error-message']}>
+          {errorMessage}
+        </Typography>
+      )}
     </div>
   );
 };

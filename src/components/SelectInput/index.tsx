@@ -4,6 +4,7 @@ import React, { FC } from 'react';
 import styles from './SelectInput.module.css';
 
 import { ISelectInputProps } from './ISelectInput.d';
+import { Typography } from '../Typography';
 
 const SelectInput: FC<ISelectInputProps> = ({
   id,
@@ -47,10 +48,12 @@ const SelectInput: FC<ISelectInputProps> = ({
             );
           })}
         </select>
+        {errorMessage && (
+          <Typography variant="body1" className={styles['error-message']}>
+            {errorMessage}
+          </Typography>
+        )}
       </div>
-      {errorMessage && (
-        <span className={styles['error-message']}>{errorMessage}</span>
-      )}
     </>
   );
 };

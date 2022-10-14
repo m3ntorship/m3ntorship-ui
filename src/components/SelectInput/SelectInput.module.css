@@ -27,7 +27,7 @@
 }
 
 .error-message {
-  @apply text-error text-12 font-regular font-inter tracking-semi-wide leading-16;
+  @apply text-error absolute -bottom-xl;
 }
 
 .disabled {
