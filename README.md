@@ -1,181 +1,136 @@
-# TSDX React w/ Storybook User Guide
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
+# M3ntorship-UI
 
-> This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
+## About The Project:
+As the name implies `m3ntorship-ui` is a UI-Package that consist of [React](https://reactjs.org/) components built with [TypeScript](https://www.typescriptlang.org/docs/handbook/react.html) and uses [Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/) for playground display and UI testing.	
 
-> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
+Link to the package [on **npm** here](https://www.npmjs.com/package/m3ntorship-ui)
 
-## Commands
+This will be a guide on **[installation](#installation)** and usage, also if you are more curious or planning to contribute you can jump to the **[development](#development)** guide .
 
-TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
 
-The recommended workflow is to run TSDX in one terminal:
+## Installation
+Simply `cd` into your project directory and run the command 
 
-```bash
-npm start # or yarn start
-```
+	yarn add m3ntorship-ui  
+or
+	
+	npm i m3ntorship-ui
 
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
+### Usage Guide
+Currently, our package has 11 components, and you can import them all the same way after installation.
 
-Then run either Storybook or the example playground:
+	import { ComponentName } from 'm3ntorship-ui';
 
-### Storybook
+You will also need to import the styling file for our components, in your `app` file or `index`
+add the following ***(pick a global file on the project level  so you only need to this once)*** 
 
-Run inside another terminal:
+	 import 'm3ntorship-ui/dist/m3ntorship-ui.esm.css';
 
-```bash
-yarn storybook
-```
+### Published Components List
+-	Avatar
+-	Badge
+-	Button
+-	CheckBox
+-	IconButton
+-	InputField
+-	Link
+-	Progress
+-	Radio
+-	SelectInput
+-	Typography
 
-This loads the stories from `./stories`.
+We have a playground to try out all of our components [here on Chromatic](https://www.chromatic.com/library?appId=62c052f3652cc43232110cee)
 
-> NOTE: Stories should reference the components as if using the library, similar to the example playground. This means importing from the root project directory. This has been aliased in the tsconfig and the storybook webpack config as a helper.
 
-### Example
 
-Then run the example inside another:
+## Development
 
-```bash
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
-```
+### Download The Project
+  
 
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, we use [Parcel's aliasing](https://parceljs.org/module_resolution.html#aliases).
+you can use any of the methods `GitHub` allows you to, that would be:
 
-To do a one-off build, use `npm run build` or `yarn build`.
 
-To run tests, use `npm test` or `yarn test`.
+- Download a zip file *(need to extract after downloading via software like [7zip](https://www.7-zip.org/) or [Winrar](https://www.win-rar.com/)*)
 
-## Configuration
+- Clone via HTTP
 
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
+- Clone via SSH *(Recommended and the way the guide is written)*
 
-### Jest
+  
 
-Jest tests are set up to run with `npm test` or `yarn test`.
+*if you need more info on **SSH** keys or how to set up one you can check the [Github docs here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)*.
 
-### Bundle analysis
+ *For this project we recommend using **yarn** as your package manager, you can get to know more about [installing yarn here](https://yarnpkg.com/getting-started/install).*	
+  
 
-Calculates the real cost of your library using [size-limit](https://github.com/ai/size-limit) with `npm run size` and visulize it with `npm run analyze`.
+## How to Run Project:
 
-#### Setup Files
+Assuming you already cloned the project with:
 
-This is the folder structure we set up for you:
+	git clone git@github.com:m3ntorship/m3ntorship-ui.git
 
-```txt
-/example
-  index.html
-  index.tsx       # test your component here in a demo app
-  package.json
-  tsconfig.json
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-/stories
-  Thing.stories.tsx # EDIT THIS
-/.storybook
-  main.js
-  preview.js
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
-```
+  
+   [installation](#Installiation)
 
-#### React Testing Library
+The next step is to use the terminal and `cd` into the project directory:
 
-We do not set up `react-testing-library` for you yet, we welcome contributions and documentation on this.
+  
 
-### Rollup
+	cd m3ntorship-ui
 
-TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
 
-### TypeScript
 
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
+### Installation
 
-## Continuous Integration
+In the project directory, you can run:
 
-### GitHub Actions
+  
 
-Two actions are added by default:
+	yarn
 
-- `main` which installs deps w/ cache, lints, tests, and builds on all pushes against a Node and OS matrix
-- `size` which comments cost comparison of your library on every pull request using [size-limit](https://github.com/ai/size-limit)
+or
 
-## Optimizations
+  
 
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
+	npm i
 
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
+after the installation is done, you can start the project:
+while you can use any of the following to run the project in development mode:
 
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
-}
-```
+	yarn start
 
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
+or
 
-## Module Formats
+	npm start
 
-CJS, ESModules, and UMD module formats are supported.
+To view current components you need to run Storybook
 
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
+	yarn storybook
 
-## Deploying the Example Playground
+That should open a new tab in your browser that directs to http://localhost:6006
+				*you can change the port from the package.json file*
 
-The Playground is just a simple [Parcel](https://parceljs.org) app, you can deploy it anywhere you would normally deploy that. Here are some guidelines for **manually** deploying with the Netlify CLI (`npm i -g netlify-cli`):
 
-```bash
-cd example # if not already in the example folder
-npm run build # builds to dist
-netlify deploy # deploy the dist folder
-```
+If you need to take a look at the configurations, this project was bootstrapped via **TDSX**, we recommend [taking a look at their docs](https://tsdx.io/).
 
-Alternatively, if you already have a git repo connected, you can set up continuous deployment with Netlify:
+## More About This Project:
 
-```bash
-netlify init
-# build command: yarn build && cd example && yarn && yarn build
-# directory to deploy: example/dist
-# pick yes for netlify.toml
-```
+Mentorship is an open-source initiative to prepare aspiring software talents into being top-level professionals that are able to compete and stand out in the market!
 
-## Named Exports
+Why is it written M3ntorship? isn't that kind of old??
 
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
+> "The name is written with **(3)** instead of just (E)
+because it sends a message, 3 is looking at the opposite direction of the E, and that's the message"
+Ahmed Ayoub, Founding Father of M3ntorship.
+   
+Wondering about usage and license, for this package we use the  [MIT License](https://github.com/m3ntorship/m3ntorship-ui/blob/dev/LICENSE)
 
-## Including Styles
+## Contributors 
+Here is [our list of contributors](https://github.com/m3ntorship/m3ntorship-ui/graphs/contributors)
+## Future Plans
 
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
-
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
-
-## Publishing to NPM
-
-We recommend using [np](https://github.com/sindresorhus/np).
-
-## Usage with Lerna
-
-When creating a new package with TSDX within a project set up with Lerna, you might encounter a `Cannot resolve dependency` error when trying to run the `example` project. To fix that you will need to make changes to the `package.json` file _inside the `example` directory_.
-
-The problem is that due to the nature of how dependencies are installed in Lerna projects, the aliases in the example project's `package.json` might not point to the right place, as those dependencies might have been installed in the root of your Lerna project.
-
-Change the `alias` to point to where those packages are actually installed. This depends on the directory structure of your Lerna project, so the actual path might be different from the diff below.
-
-```diff
-   "alias": {
--    "react": "../node_modules/react",
--    "react-dom": "../node_modules/react-dom"
-+    "react": "../../../node_modules/react",
-+    "react-dom": "../../../node_modules/react-dom"
-   },
-```
-
-An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)
+We aim to make this a fully functioning library of components, so we aim at adding more components and improving our current work.
+When?
+Well,that's the beauty of open-source, no one knows 😉
